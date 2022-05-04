@@ -4,11 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
     <title>Homepage</title>
     <style>
+
+        /*                                                       Navbar                                                         */
+        .navbarImage{
+            width: 4%;
+            height: 4%
+        }
+        .searchBox{
+            width: 50%;
+            height: 30px;
+            border: 1px solid green;
+            margin-top: 8px;
+            border-left: none;
+            /* border-radius: 5px; */
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-right: 10px;
+        }
+        #searchicon{
+            border: 1px solid green;
+            height: 22px;
+            align-items: center;
+            padding: 5px;
+            margin-left: 30px;
+            margin-top: 8px;
+            color: green;
+            border-right: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        #navbartop{
+            /* border: 1px solid red; */
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+        #delivery{
+            /* border: 1px solid red; */
+            margin-left: 20px;
+            width: 10%;
+            height: 30px;
+            margin-top: -1px;
+            margin-top: 5px;
+            background-color: lightgray;
+            padding: 3px 35px 3px 15px;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 8px;
+            border-radius: 5px;
+        }
+        #delivery:hover{
+            cursor: pointer;
+        }
+        #navbartop>button{
+            /* border: 1px solid blue; */
+            height: 30px;
+            padding: 5px 15px 5px 15px;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            margin-left: 25px;
+            border-radius: 5px;
+        }
+        #navbartop>button:hover{
+            cursor: pointer;
+        }
+        #bagicon{
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            margin-left: 20px;
+            width: 5%;
+            font-size: 30px;
+            color: red;
+        }
+        #btna{
+            text-decoration: none;
+            color: white;
+        }
+        /* Bottom */
+        #navbarbottom{
+            display: flex;
+            gap: 60px;
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+        }
+        #navbarbottom a{
+            text-decoration: none;
+            color: black;
+        }
+        #navbarbottom img{
+            margin-top: 10px;
+            width: 5%;
+            height: 30px;
+        }
+        #navbarbottom img:hover{
+            cursor: pointer;
+        }
+        #select{
+            background-color: green;
+            color: white;
+            height: 40px;
+            margin-top: 5px;
+            padding: 10px 15px 10px 15px;
+            border-radius: 6px;
+        }
+        /* #NavbarContainer{
+        } */
+
         /*                                                  image slide show CSS                                                */
         #imageContainer{
-            margin-top: 200px;
+            margin-top: 10px;
             height: 440px;
             width: 100%;
             /* border: 1px solid red; */
@@ -69,7 +178,7 @@
            justify-content: space-evenly;
            width: 80%;
            margin: auto;
-           margin-top: 40px;
+           margin-top: 20px;
        }
        /* My Smart Basket */
 
@@ -90,9 +199,10 @@
        /*                                                       Banmk Offers                                                 */
        .bankheading{
            text-align: center;
+           /* text-align: start; */
            margin-bottom: -5px;
            font-size: 22px;
-           color: grey;
+           font-weight: bold;
        }
        .hrbankoffer{
            width: 80%;
@@ -111,7 +221,12 @@
        #bankimages img{
            width: 100%;
            /* height: 100%; */
-           border: 0.5px solid lightgray;
+           /* border: 0.5px solid lightgray;   */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+       }
+       #bankimages img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        
        /*                                                       Best Sellers                                                     */
@@ -128,8 +243,13 @@
            margin-top: 40px;
        }
        #leftside{
-           border: 0.5px solid lightgray;
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
            width: 100%;
+       }
+       #leftside:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        #rightcontainer{
            /* border: 1px solid red; */
@@ -146,7 +266,12 @@
        }
        #rightside img{
            width: 100%;
-            border: 0.5px solid lightgray;
+            /* border: 0.5px solid lightgray; */
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+           border-radius: 10px;
+       }
+       #rightside img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        #fruitandvegContainer{
            /* border: 1px solid red; */
@@ -173,7 +298,12 @@
        }
        #dailystaplesimg img{
            width: 100%;
-           border: 0.5px solid lightgray;
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+       }
+       #dailystaplesimg img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
 
        /*                                                                 Beverages                                               */
@@ -198,12 +328,13 @@
 
        /*                                                         after Home & Kitchen Big Slider img                               */
        #seccondSlider{
-           border: 1px solid lightgray;
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
            height: 420px;
            width: 80%;
            margin: auto;
            margin-top: 50px;
-       }
+          border-radius: 5px;
+        }
 
        /*                                                                    Brand Store                                             */
        #brandstoreContainer{
@@ -221,14 +352,201 @@
            margin: auto;
        }
 
+       /*                                                          Footer PARA                                                   */
+       #paraContainer{
+           border: 1px solid grey;
+           width: 80%;
+           margin: auto;
+           height: auto;
+           margin-top: 40px;
+       }
+       .para{
+           width: 80%;
+           margin: auto;
+           text-align: justify;
+        }
+
+        /*                                                            Footer                                                       */
+
+        #footerContainer{
+            background-color: black;
+            border: 1px solid black;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #firstBox{
+            width: 80%;
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 380px;
+            margin: auto;
+            margin-bottom: -50px;
+        }
+        #firstLink{
+            width: 160%;
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 170px;
+        }
+        #firstLink a{
+            text-decoration: none;
+        }
+        #firstLink a:hover{
+            text-decoration: underline;
+        }
+        #firstLink p{
+            color: grey;
+        }
+        
+        /* first right  */
+        .bigbasketImg{
+            width: 18%;
+        }
+      
+        .download{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            width: 55%;
+            /* border: 1px solid red; */
+        }
+        .download img{
+            width: 50%;
+            height: 50%;
+        }
+        .download img:hover{
+            cursor: pointer;
+        }
+        .download img:nth-child(1){
+            margin-top: 13px;
+            width: 50%;
+        }
+        #social{
+            display: flex;
+            justify-content: space-evenly;
+            width: 45%;
+            /* border: 1px solid red; */
+            margin-left: -30px;
+        }
+        #social img{
+            width: 15%;
+        }
+        #socoalContainer{
+            width: 50%;
+            /* border: 1px solid red; */
+            margin-left: 60px;
+        }
+        #socoalContainer  button{
+            color: white;
+            padding: 5px;
+            background-color: black;
+        }
+        #socoalContainer  button:hover{
+            background-color: white;
+            color: black;
+        }
+        #socoalContainer p{
+            color: white;
+        }
+
+        /* Middle  */
+        #hrdashed1{
+            width: 80%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: -40px;
+        }
+        
+        #tags{
+            width: 80%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: -40px;
+            /* background-color: black; */
+        }
+        .cityhead{
+            text-align: center;
+            color: white;
+        }
+        #tags p{
+            /* border: 1px solid red; */
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            color: grey;
+            line-height: 30px;
+        }
+
+
+        /* last Box  */
+        #hrdashed{
+            width: 80%;
+            margin: auto;
+            text-decoration:dashed;
+            margin-top: 60px;
+        }
+
+        #bigSeccondLinkContainer{
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            /* background-color: black; */
+        }
+        #bigSeccondLinkContainer p{
+            color: white;
+        }
+        #bigSeccondLinkContainer a{
+            text-decoration: none;
+        }
+        #bigSeccondLinkContainer p:hover{
+            text-decoration: underline;
+        }         
+        #seccondBox{
+            display: flex;
+            gap: 110px;
+        }
+        #seccondLink{
+            display: flex;
+            gap: 110px;
+            margin-top: -20px;
+        }
+        .showmore{
+            margin-top: 25px;
+            display: block;
+            text-align: center;
+            color: white;
+        }       
     </style>
 </head>
 <body>
     
     <!-- navbar + -->
-
-
-
+    <div id="NavbarContainer">
+        <div id="navbartop">
+            <img class="navbarImage" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
+            <i class="fa-solid fa-magnifying-glass" id="searchicon" ></i><input class="searchBox" type="text" placeholder="Search for Products...">
+                <p id="delivery">Delivery in 1 Day
+                    5666441,Banglore
+              </p>
+              <button><a href="" id="btna">Login/Sign Up</a></button>
+              <a href=""><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
+              <p></p>
+        </div>
+        <div id="navbarbottom">
+            <select name="" id="select">
+                <option value="">Shop by Category</option>
+            </select>
+            <a href=""><p>Exotic Fruits & Vegg...</p></a>
+            <a href=""><p>Tea</p></a>
+            <a href=""><p>Ghee</p></a>
+            <a href=""><p>Nandhini</p></a>
+            <a href=""><p>Fresh Vegetables</p></a>
+            <img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_bbstar_28_220921_all.png" alt="">
+            <img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="">
+        </div>
+    </div>
 
     <!-- image slide show -->
     <div id="imageContainer">
@@ -461,5 +779,530 @@
             </div>
         </div>
    </div>
+
+   <!-- Footer Para  -->
+
+   <div id="paraContainer">
+        <p class="para">bigbasket – online grocery store
+            Did you ever imagine that the freshest of fruits and vegetables, top quality pulses and food grains, dairy products and hundreds of branded items could be handpicked and delivered to your home, all at the click of a button? India’s first comprehensive online megastore, bigbasket.com, brings a whopping 20000+ products with more than 1000 brands, to over 4 million happy customers. From household cleaning products to beauty and makeup, bigbasket has everything you need for your daily needs. bigbasket.com is convenience personified We’ve taken away all the stress associated with shopping for daily essentials, and you can now order all your household products and even buy groceries online without travelling long distances or standing in serpentine queues. Add to this the convenience of finding all your requirements at one single source, along with great savings, and you will realize that bigbasket- India’s largest online supermarket, has revolutionized the way India shops for groceries. Online grocery shopping has never been easier. Need things fresh? Whether it’s fruits and vegetables or dairy and meat, we have this covered as well! Get fresh eggs, meat, fish and more online at your convenience. Hassle-free Home Delivery options
+            
+            We deliver to 25 cities across India and maintain excellent delivery times, ensuring that all your products from groceries to snacks branded foods reach you in time.
+            
+            Slotted Delivery: Pick the most convenient delivery slot to have your grocery delivered. From early morning delivery for early birds, to late-night delivery for people who work the late shift, bigbasket caters to every schedule.
+            Express Delivery: This super useful service can be availed by customers in cities like Bangalore, Mumbai, Pune, Chennai, Kolkata, Hyderabad and Delhi-NCR in which we deliver your orders to your doorstep in 90 Minutes.
+            BB Specialty stores: Missed out on buying that essential item from your favorite neighborhood store for tonight’s party? We’ll deliver it for you! From bakery, sweets and meat to flowers and chocolates, we deliver your order in 90 minutes, through a special arrangement with a nearby specialty store, verified by us.
+            Read more..
+            India’s biggest Online Supermarket
+            bigbasket.com believes in providing the highest level of customer service and is continuously innovating to meet customer expectations. Our On-time Guarantee is one such assurance where we refund 10% of the bill value if the delivery is delayed. For all your order values above Rs. 1000, we provide free delivery. A wide range of imported and gourmet products are available through our express delivery and slotted delivery service. If you ever find an item missing on delivery or want to return a product, you can report it to us within 48 hours for a ‘no-questions-asked’ refund.
+            
+            Best quality products for our quality-conscious customers.
+            
+            bigbasket.com is synonymous with superior quality and continues to strive for higher levels of customer trust and confidence, by taking feedback and giving our customers what they want. We have added the convenience of pre-cut fruits in our Fresho range. If it’s a product category you’re looking to shop from, we’ve made it convenient for you to access all products in a section easily. For instance, if you’re looking for beverages, you can order from a long list of beverages that include cool drinks, hot teas, fruit juices and more.
+            
+            We are proud to be associated closely with the farmers from whom we source our fresh products. Most of our farm-fresh products are sourced directly from farmers, which not only ensures the best prices and freshest products for our customers but also helps the farmers get better prices. With more than 80 Organic Fruits and Vegetables and a wide range of organic staples, bigbasket has the largest range in the organic products category.
+            
+            When it comes to payment, we have made it easy for our customers can pay through multiple payment channels like Credit and Debit cards, Internet Banking, e-wallets and Sodexo passes or simply pay Cash on Delivery (COD).The convenience of shopping for home and daily needs, while not compromising on quality, has made bigbasket.com the online supermarket of choice for thousands of happy customers across India.</p>
+   </div>
+
+
+   <!-- Footer  -->
+<div id="footerContainer">
+
+   <div id="firstBox">
+    <div>
+        <div id="firstLink">
+            <div>
+                <p>Bigbasket</p>
+                <a href=""><p>About Us</p></a>
+                <a href=""><p>In News</p></a>
+                <a href=""><p>Green bigbasket</p></a>
+                <a href=""><p>Privacy Policy</p></a>
+                <a href=""><p>Affiliate</p></a>
+                <a href=""><p>Terms and Conditions</p></a>
+                <a href=""><p>bb Daily</p></a>
+            </div>
+            <div>
+                <p>Help</p>
+                <a href=""><p>FAQs</p></a>
+                <a href=""><p>Contact Us</p></a>
+                <a href=""><p>bb Wallet FAQs</p></a>
+                <a href=""><p>bb Wallet T&Cs</p></a>
+                <a href=""><p>Vendor Connect</p></a>
+            </div>
+        </div>
+    </div>
+
+   <div id="socoalContainer">
+       <img class="bigbasketImg" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
+       <div class="download">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJM6O9zXklYkSQxeE2SsygpTkkdwOwQcjAGg&usqp=CAU" alt="">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+        <div id="social">
+            <img src="https://w7.pngwing.com/pngs/152/951/png-transparent-social-media-discovery-canyon-campus-school-computer-icons-facebook-desktop-small-fresh-background-thumbnail.png" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiz5_zr5bhtmyvwC2T0BO9N8R9fgk3I79SyLzDZR1hVYl6JhAc7qIYVYv1AEc_m_gWdwM&usqp=CAU" alt="">
+            <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png" alt="">
+        </div>
+        <div>
+            <p>Vendor Connect</p>
+            <button>Become a Seller</button>
+        </div>
+   </div>
+
+</div>
+
+
+    <hr id="hrdashed1">
+    <div id="tags">
+        <h4 class="cityhead">Cities We Serve</h4>
+        <p>Ujjain
+            |
+            Madurai
+            |
+            Shambhu
+            |
+            Sircilla District
+            |
+            Pratapgarh District
+            |
+            South 24 Parganas District
+            |
+            Muzaffarnagar District
+            |
+            Meerut District
+            |
+            Ludhiana District
+            |
+            Hooghly District
+            |
+            Gonda District
+            |
+            Fatehgarh Sahib District
+            |
+            Baghpat District
+            |
+            Amroha District
+            |
+            Amravati
+            |
+            Jamshedpur
+            |
+            Kolhapur
+            |
+            Kalaburagi
+            |
+            Guwahati
+            |
+            Bhubaneshwar-Cuttack
+            |
+            Bhiwadi
+            |
+            Sonipat
+            |
+            Bahadurgarh
+            |
+            Raichur
+            |
+            Sindudurg
+            |
+            Sangareddy
+            |
+            Khammam
+            |
+            Jadcherla
+            |
+            Tiruppur
+            |
+            Hubli
+            |
+            Puducherry
+            |
+            Tumakuru
+            |
+            Udham-Singh-Nagar
+            |
+            Nellore
+            |
+            Ambala
+            |
+            Agra
+            |
+            Rajkot
+            |
+            Sikar
+            |
+            Nadia
+            |
+            Bardoli
+            |
+            Sultanpur District
+            |
+            Thrissur
+            |
+            Raebareli District
+            |
+            Raipur
+            |
+            Sambhal District
+            |
+            Siddipet District
+            |
+            Faridabad
+            |
+            Prakasam
+            |
+            Nalgonda
+            |
+            Karnal
+            |
+            Panipat
+            |
+            Rohtak
+            |
+            Renigunta
+            |
+            Patiala
+            |
+            Trichy
+            |
+            Bulandshahr
+            |
+            Prakasam District
+            |
+            Surat
+            |
+            Mysore
+            |
+            Vadodara
+            |
+            Pune
+            |
+            Hyderabad
+            |
+            Kolkata
+            |
+            Chennai
+            |
+            Patan
+            |
+            Siddhpur
+            |
+            Mumbai
+            |
+            Nashik
+            |
+            Kalol
+            |
+            Kadi
+            |
+            Himatnagar
+            |
+            Mehsana
+            |
+            Raipur
+            |
+            Amaravathi
+            |
+            Allahabad
+            |
+            Jodhpur
+            |
+            Palakkad
+            |
+            Palwal
+            |
+            Kalinga Nagar
+            |
+            Mahabubnagar
+            |
+            Korba
+            |
+            Vijayawada-Guntur
+            |
+            Pilakhua District
+            |
+            Bhopal
+            |
+            Jaipur
+            |
+            Ahmedabad-Gandhinagar
+            |
+            Noida-Ghaziabad
+            |
+            Meerut
+            |
+            Vizianagaram
+            |
+            Medak District
+            |
+            East Godavari District
+            |
+            Nizamabad District
+            |
+            Kamareddy District
+            |
+            Lucknow Rural
+            |
+            Noida Rural
+            |
+            Chennai Rural
+            |
+            Vizag Rural
+            |
+            Nagpur
+            |
+            Kochi
+            |
+            Visnagar
+            |
+            Itarsi
+            |
+            Khordha
+            |
+            Dewas
+            |
+            kolar
+            |
+            Patna
+            |
+            Mandideep
+            |
+            Coimbatore
+            |
+            Kurnool
+            |
+            Suryapet District
+            |
+            Hosur
+            |
+            Eluru
+            |
+            Ghaziabad
+            |
+            Muzzafarpur
+            |
+            Delhi
+            |
+            Gurgaon
+            |
+            Bangalore
+            |
+            Chikkaballapura District
+            |
+            Srikakulam Disctrict
+            |
+            Vizianagaram Disctrict
+            |
+            Yanam District
+            |
+            Modinagar District
+            |
+            Puri
+            |
+            Gautam Buddha Nagar District
+            |
+            Anantapur District
+            |
+            Unjha
+            |
+            Dhone
+            |
+            Halflong
+            |
+            Parwanoo
+            |
+            Jajpur
+            |
+            Krishna District
+            |
+            Ashta
+            |
+            West-Godavari
+            |
+            Guntur-Rural
+            |
+            Kota
+            |
+            Barabanki District
+            |
+            Visakhapatnam District
+            |
+            Indore
+            |
+            Mhow
+            |
+            Visakhapatnam
+            |
+            Ludhiana
+            |
+            Hapur
+            |
+            Chandigarh Tricity
+            |
+            East-Godavari-2
+            |
+            Chittoor District
+            |
+            Tiruvallur District
+            |
+            Bidar District
+            |
+            Sangareddy District
+            |
+            Ayodhya District
+            |
+            Hoshangabad
+            |
+            Madanapalli
+            |
+            Tirupati
+            |
+            Miryalaguda
+            |
+            Kalwakurthy
+            |
+            Hajipur
+            |
+            Kadapa
+            |
+            Bhadrak
+            |
+            Gurugram Rural
+            |
+            Indore Rural
+            |
+            Guwahati Rural
+            |
+            Bhopal Rural
+            |
+            Hyderabad Rural
+            |
+            Coimbatore Rural
+            |
+            Bhubaneswar Rural
+            |
+            Bangalore Rural
+            |
+            Kolkata Rural
+            |
+            Kochi Rural
+            |
+            Kanpur
+            |
+            Lucknow
+            |
+            Anand
+            |
+            Saran
+            |
+            Nagpur Rural
+            |
+            Patna Rural
+            |
+            Mumbai Rural
+            |
+            Mysore Rural
+            |
+            Vadodara Rural
+            |
+            Jaipur Rural
+            |
+            Pune Rural
+            |
+            Surat Rural
+            |
+            Aligarh District
+            |
+            Amethi District
+            |
+            Jammu Kashmir
+            |
+            Katihar
+            |
+            Kottayam
+            |
+            Rajamahendravaram
+            |
+            Kakinada
+            |
+            Kundli
+            |
+            Sahibganj
+            |
+            Salcete
+            |
+            Allahabad
+            |
+            DehraDun
+            |
+            Chittor District
+            |
+            Saharanpur District
+            |
+            Aligarh</p>
+    </div>
+
+   <hr id="hrdashed">
+   <div id="bigSeccondLinkContainer">
+    <div id="seccondBox">
+        <div>
+            <p>Popular Categories</p>
+            <div id="seccondLink">
+                <div>
+                    <a href=""><p>Sunflower Oils</p></a>
+                    <a href=""><p>Milk</p></a>
+                    <a href=""><p>Organic F&V</p></a>
+                    <a href=""><p>Floor Cleaners</p></a>
+                    <a href=""><p>Frozen Veg Food</p></a>
+                </div>
+                <div>
+                    <a href=""><p>Wheat Atta</p></a>
+                    <a href=""><p>Health Drinks</p></a>
+                    <a href=""><p>Namkeen</p></a>
+                    <a href=""><p>Other Juices</p></a>
+                    <a href=""><p>Diapers & Wipes</p></a>
+                </div>
+                <div>
+                    <a href=""><p>Ghee</p></a>
+                    <a href=""><p>Flakes</p></a>
+                    <a href=""><p>Eggs</p></a>
+                    <a href=""><p>Leafy Vegetables</p></a>
+                </div>
+        </div>
+            </div>
+    
+            <div id="seccondBox">
+                <div>
+                    <p>Popular Brands</p>
+                    <div id="seccondLink">
+                        <div>
+                            <a href=""><p>Amul</p></a>
+                            <a href=""><p>Red Bull</p></a>
+                            <a href=""><p>Yummiez</p></a>
+                            <a href=""><p>Britannia</p></a>
+                            <a href=""><p>Haldirams</p></a>
+                        </div>
+                        <div>
+                            <a href=""><p>Nescafe</p></a>
+                            <a href=""><p>elite cake</p></a>
+                            <a href=""><p>Yera</p></a>
+                            <a href=""><p>Wow Momo</p></a>
+                            <a href=""><p>Ferrero</p></a>
+                        </div>
+                        <div>
+                            <a href=""><p>MTR</p></a>
+                            <a href=""><p>Pediasure</p></a>
+                            <a href=""><p>Yakult</p></a>
+                            <a href=""><p>Fortune</p></a>
+                            <a href=""><p>Lays</p></a>
+                        </div>
+                    </div>
+                </div>
+               </div>
+       </div>
+       <a class="showmore" href="">Show more+</a>
+   </div>
+
+</div>
 </body>
 </html>

@@ -1,0 +1,260 @@
+#NavbarContainer{
+    /* border: 1px solid red; */
+    margin-left: 10px;
+}
+.navbarImage{
+    width: 4%;
+    height: 4%
+}
+.searchBox{
+    width: 50%;
+    height: 30px;
+    border: 1px solid green;
+    margin-top: 8px;
+    border-left: none;
+    /* border-radius: 5px; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 10px;
+}
+#searchicon{
+    border: 1px solid green;
+    height: 22px;
+    align-items: center;
+    padding: 5px;
+    margin-left: 30px;
+    margin-top: 8px;
+    color: green;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#navbartop{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+#delivery{
+    /* border: 1px solid red; */
+    margin-left: 20px;
+    width: 10%;
+    height: 30px;
+    margin-top: -1px;
+    margin-top: 5px;
+    background-color: lightgray;
+    padding: 3px 35px 3px 15px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+#delivery:hover{
+    cursor: pointer;
+}
+#navbartop>button{
+    /* border: 1px solid blue; */
+    height: 30px;
+    padding: 5px 15px 5px 15px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+#navbartop>button:hover{
+    cursor: pointer;
+}
+#bagicon{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 5%;
+    font-size: 30px;
+    color: red;
+}
+#btna{
+    text-decoration: none;
+    color: white;
+}
+/* Bottom */
+#navbarbottom{
+    display: flex;
+    gap: 60px;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+}
+#navbarbottom a{
+    text-decoration: none;
+    color: black;
+}
+#navbarbottom img{
+    margin-top: 10px;
+    width: 5%;
+    height: 30px;
+}
+#navbarbottom img:hover{
+    cursor: pointer;
+}
+#select{
+    background-color: green;
+    color: white;
+    height: 40px;
+    margin-top: 5px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 6px;
+}
+
+/*                                                            Footer                                                       */
+
+#footerContainer{
+    background-color: black;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#firstBox{
+    width: 80%;
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 380px;
+    margin: auto;
+    margin-bottom: -50px;
+}
+#firstLink{
+    width: 160%;
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 170px;
+}
+#firstLink a{
+    text-decoration: none;
+}
+#firstLink a:hover{
+    text-decoration: underline;
+}
+#firstLink p{
+    color: grey;
+}
+
+/* first right  */
+.bigbasketImg{
+    width: 18%;
+}
+
+.download{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 55%;
+    /* border: 1px solid red; */
+}
+.download img{
+    width: 50%;
+    height: 50%;
+}
+.download img:hover{
+    cursor: pointer;
+}
+.download img:nth-child(1){
+    margin-top: 13px;
+    width: 50%;
+}
+#social{
+    display: flex;
+    justify-content: space-evenly;
+    width: 45%;
+    /* border: 1px solid red; */
+    margin-left: -30px;
+}
+#social img{
+    width: 15%;
+}
+#socoalContainer{
+    width: 50%;
+    /* border: 1px solid red; */
+    margin-left: 60px;
+}
+#socoalContainer  button{
+    color: white;
+    padding: 5px;
+    background-color: black;
+}
+#socoalContainer  button:hover{
+    background-color: white;
+    color: black;
+}
+#socoalContainer p{
+    color: white;
+}
+
+/* Middle  */
+#hrdashed1{
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: -40px;
+}
+
+#tags{
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: -40px;
+    /* background-color: black; */
+}
+.cityhead{
+    text-align: center;
+    color: white;
+}
+#tags p{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: grey;
+    line-height: 30px;
+}
+
+
+/* last Box  */
+#hrdashed{
+    width: 80%;
+    margin: auto;
+    text-decoration:dashed;
+    margin-top: 60px;
+}
+
+#bigSeccondLinkContainer{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color: black; */
+}
+#bigSeccondLinkContainer p{
+    color: white;
+}
+#bigSeccondLinkContainer a{
+    text-decoration: none;
+}
+#bigSeccondLinkContainer p:hover{
+    text-decoration: underline;
+}         
+#seccondBox{
+    display: flex;
+    gap: 110px;
+}
+#seccondLink{
+    display: flex;
+    gap: 110px;
+    margin-top: -20px;
+}
+.showmore{
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+    color: white;
+}       

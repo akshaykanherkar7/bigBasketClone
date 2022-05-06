@@ -7,7 +7,7 @@ let navbar = () =>{
       </p>
       <button><a href="" id="btna">Login/Sign Up</a></button>
       <a href=""><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
-      <p></p>
+      <p id = "bagcount"></p>
 </div>
 <div id="navbarbottom">
     <select name="" id="select">
@@ -33,6 +33,46 @@ let navbar = () =>{
     <img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="">
 </div>`
 }
+
+
+let navbar2 = () => {
+    return `<div id="navbartop">
+    <img class="navbarImage" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
+    <i class="fa-solid fa-magnifying-glass" id="searchicon" ></i><input class="searchBox" type="text" placeholder="Search for Products...">
+        <p id="delivery">Delivery in 1 Day
+            5666441,Banglore
+      </p>
+      <div id="navbaricon">
+       <a href=""> <i class="fa-regular fa-user" id="usericon"></i></a>
+        <a href=""><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
+        <p id = "bagcount"></p>
+      </div>
+</div>
+<div id="navbarbottom">
+    <select name="" id="select">
+        <option value="">Shop by Category</option>
+        <option value="">Fruits & Vegetables</option> 
+        <option value="">Foodgrains,Oil & Masala</option>
+        <option value="">Bakery, Cakes & Dairy</option>
+        <option value="">Beverages</option>
+        <option value="">Snacks & Brandes Foods</option>
+        <option value="">Beauty & Hygiene</option>
+        <option value="">Cleaning & Household</option>
+        <option value="">Kitchen, Garden & Pets</option>
+        <option value="">Eggs,Meat & Fish</option>
+        <option value="">Gourmet & World Food</option>
+        <option value="">Baby Care</option> 
+    </select>
+    <a href=""><p>Exotic Fruits & Vegg...</p></a>
+    <a href=""><p>Tea</p></a>
+    <a href=""><p>Ghee</p></a>
+    <a href=""><p>Nandhini</p></a>
+    <a href=""><p>Fresh Vegetables</p></a>
+    <img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_bbstar_28_220921_all.png" alt="">
+    <img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="">
+</div>`
+}
+
 
 let footer = () => {
     return ` <div id="firstBox">
@@ -529,4 +569,4 @@ let footer = () => {
        </div>
        <a class="showmore" href="">Show more+</a>`
 }
-export {navbar, footer};
+export {navbar, navbar2, footer};

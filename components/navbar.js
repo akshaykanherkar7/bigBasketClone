@@ -5,7 +5,7 @@ let navbar = () =>{
         <p id="delivery">Delivery in 1 Day
             5666441,Banglore
       </p>
-      <button><a href="" id="btna">Login/Sign Up</a></button>
+      <button><a href="email.html" id="btna">Login/Sign Up</a></button>
       <a href=""><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
       <p id = "bagcount"></p>
 </div>

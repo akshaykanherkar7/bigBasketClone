@@ -1,0 +1,74 @@
+#login{
+    height: 510px;
+    width: 355px;
+    border: 1px solid white;
+    margin-left: 40%;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+     margin-top: 70px;
+    }
+    #text{
+    color: rgb(152, 214, 152);
+    text-align: center;
+    margin-top: 30px
+    }
+    #number{
+                height: 40px;
+                width: 90%;
+                margin-top: 100px;
+                border: none;
+                outline: none;
+                margin-left: 15px;
+                overflow: hidden;
+                border-bottom: 1px solid green;
+    }
+    
+    #box{
+    margin-top: 100px;
+    margin-left: 10%;
+    height: 50px;
+    width: 80%;
+    margin-right: 20px;
+    background-color: white;
+    border:1px solid rgb(148, 139, 139);
+    border-radius: 4px;
+    font-size: 14px;
+    color: rgb(121, 118, 118);
+    cursor: pointer;
+    
+    }
+    
+    
+    #done{
+                margin-top: 25px;
+                margin-left: 10%;
+                height: 50px;
+                width: 80%;
+                margin-right: 20px;
+                background-color:#c1e68b;
+                border: 1px solid white;
+                color: white;
+                font-size: 16px;
+                border-radius: 4px;
+                cursor: pointer;    
+    }
+    #para1{
+                font-size: 12px;
+                text-align: center;
+                color: rgb(112, 105, 105);
+                margin-top: 15px;
+    }
+    #box2{
+                height:440px;
+                width: 280px;
+                border: 1px solid black;
+                margin-left: 110%;
+                
+    }
+    span{
+                color: rgb(95, 95, 243);
+    }
+    a{
+                color: white;
+    }#clr{
+                color: rgb(105, 100, 100);
+    }

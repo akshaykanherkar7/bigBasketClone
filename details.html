@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+
+        #homesb{
+            font-size: 10px;
+            margin-left: 150px;
+            margin-bottom: 30px;
+        }
+
+        #homesb div{
+           
+       margin-top: -200px; ;
+        }
+        #container {
+            margin: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 550px;
+            /* border: 1px solid orange; */
+            margin-left: 100px;
+            gap: 85px;
+            font-family: ProximaNova-Regular;
+        }
+
+
+        #category {
+            width: 187px;
+            height: 460px;
+
+            /* padding-top: 12px; */
+            margin-left: 170px;
+            font-size: 15px;
+
+
+            font-style: normal;
+            border: 0.10px solid grey;
+            border-top: none;
+            border-left: none;
+
+            border-bottom: none;
+
+
+        }
+
+
+
+        #category p {
+            width: 100%;
+            margin-left: -20px;
+            margin-top: -18px;
+            font-size: 15px;
+        }
+
+        #category p:hover {
+            color: #84c225;
+        }
+
+        #category h5,
+        #shyam2 {
+            margin-left: -80px;
+
+        }
+
+        #shyam1 {
+            margin-top: 20px;
+            margin-left: -100px;
+            text-align: center;
+        }
+
+        #category #shyam2 {
+            margin-top: 30px;
+        }
+
+        #shyam2 h6 {
+            margin-top: -15px;
+            margin-bottom: -500px;
+        }
+
+        #shyam2>p {
+            margin-top: -200px;
+        }
+
+        #category h6 {
+            margin-top: -25px;
+            margin-bottom: 15px;
+            /* margin-left: -15px; */
+        }
+
+        #hr1 {
+            width: 70%;
+            margin-left: 3%;
+            margin-top: 1px;
+
+        }
+
+
+
+        .bigimg{
+
+            width: 350px;
+            height: 450px;
+            transition: 0.5s all ease-in-out;
+            margin-left: -50px;
+
+
+        }
+
+        /* 
+        .bigimg:hover{
+            width: 550px;
+            height: 550px;
+         
+            
+        } */
+
+        #valuesb {
+            margin-top: 45px;
+            text-align: center;
+            margin-left: -250px;
+            margin-top: auto;
+        }
+
+        #value1 {
+            width: 40px;
+            height: 41px;
+            text-align: center;
+            border-radius: 4px;
+            margin: 5px;
+       
+        }
+
+        #value2 {
+            width: 110px;
+            height: 41px;
+            text-align: center;
+            background-color: #84c225;
+            color: white;
+            font-size: 15px;
+            border-radius: 4px;
+            margin: 5px;
+
+        }
+
+        #value3 {
+            text-align: center;
+            width: 61px;
+            height: 41px;
+            color: white;
+            background-color: grey;
+            border-radius: 4px;
+
+        }
+
+        #serd {
+            display: flex;
+
+
+            margin-left: 350px;
+           /* margin-bottom: -50px; */
+        }
+
+        #serd>img {
+            margin-right: 80px;
+            height: 50px;
+            width: px;
+            border-radius: 50px;
+
+        }
+
+        #serd div{
+            margin-top: -50px;
+        }
+
+        #About {
+            margin: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: -40px;
+        }
+
+        #About p {
+            
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        #pricesb {
+            width: 300px;
+        }
+
+        #priced{
+            margin-left: -90px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- only bootsrat start   -->
+<!-- 
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Navbar</a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav> -->
+
+<!-- 
+
+
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ -->
+
+
+    <!-- botsrat end  -->
+<!-- 
+    <h1> <a href="index.html">Details</a> </h1> -->
+
+
+
+    <!-- start  -->
+
+    <!-- <h5>0</h5> -->
+
+
+    <!-- <div id="homesb"><p>HOME>BEVERAGES>ENERGY & SOFT DRINKS>COLD DRINKS>MOUNTAIN DEW SOFT DRINK</p></div> -->
+
+    <div id="container">
+
+
+        <div id="category">
+            <div>
+
+                <h5>Category
+
+                    <hr id="hr1">
+
+                </h5>
+
+            </div>
+            <div id="shyam1">
+                <h6>Beverages</h6>
+            </div>
+            <div>
+
+                <p>Energy & Soft drinks</p>
+                <p>Cold Drinks</p>
+                <p>Ice tea ,Non Aerate</p>
+                <p>Drink </p>
+                <p>Non Alcohlic Drink</p>
+                <p>Soda & Cocktail</p>
+                <p>Sports & Energy</p>
+                <p>Drinks</p>
+            </div>
+
+            <h6 id="shyam2">Brands
+                <hr id="hr1">
+            </h6>
+
+
+            <div>
+                <p>Mirinda</p>
+                <p>Mirinda Cold Drink</p>
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <div id="divimg">
+
+        </div>
+        <div id="pricesb">
+            <div id="priced">
+                <div id="serd">
+
+                    <div>Share</div>
+                    <div><img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='20' viewBox='0 0 21 20'%3E %3Cg fill='none' fill-rule='nonzero' transform='translate(.5)'%3E %3Ccircle cx='9.929' cy='9.929' r='9.929' fill='%233B5998'/%3E %3Cpath fill='%23FFF' d='M12.425 10.318h-1.772v6.49H7.97v-6.49H6.692V8.036H7.97V6.56c0-1.055.501-2.708 2.708-2.708l1.988.008v2.214h-1.442c-.237 0-.57.119-.57.622V8.04h2.006l-.234 2.279z'/%3E %3C/g%3E %3C/svg%3E"
+                            alt=""></div>
+                    <div> <img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='20' viewBox='0 0 21 20'%3E %3Cg fill='none' fill-rule='nonzero' transform='translate(.528)'%3E %3Ccircle cx='9.929' cy='9.929' r='9.929' fill='%2355ACEE'/%3E %3Cpath fill='%23F1F2F2' d='M16.01 7.136a4.735 4.735 0 0 1-1.362.373 2.38 2.38 0 0 0 1.043-1.313c-.458.272-.966.47-1.507.576a2.374 2.374 0 0 0-4.044 2.165 6.737 6.737 0 0 1-4.892-2.48 2.373 2.373 0 0 0 .734 3.169 2.357 2.357 0 0 1-1.074-.298v.03c0 1.15.818 2.11 1.903 2.327a2.365 2.365 0 0 1-1.071.041 2.376 2.376 0 0 0 2.217 1.649 4.762 4.762 0 0 1-3.514.982 6.713 6.713 0 0 0 3.638 1.067c4.365 0 6.752-3.617 6.752-6.753 0-.103-.002-.206-.007-.307a4.813 4.813 0 0 0 1.185-1.228z'/%3E %3C/g%3E %3C/svg%3E"
+                            alt=""></div>
+                    <div><img
+                            src="data:image/svg+xml,%3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com --%3E %3Ctitle%3Egoogle-plus%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E %3Cpolygon id='path-1' points='0.00015 -5e-05 12 -5e-05 12 7.7524 0.00015 7.7524'%3E%3C/polygon%3E %3C/defs%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='7_404_-pd-page' transform='translate(-1265.000000, -139.000000)'%3E %3Cg id='Social-media' transform='translate(1174.000000, 139.000000)'%3E %3Cg id='google-plus' transform='translate(91.014205, 0.000000)'%3E %3Cellipse id='XMLID_30_' fill='%23BA5252' fill-rule='nonzero' cx='9.92884956' cy='10.0170175' rx='9.92884956' ry='9.84175439'%3E%3C/ellipse%3E %3Cg id='Group-3' transform='translate(3.985795, 6.000000)'%3E %3Cmask id='mask-2' fill='white'%3E %3Cuse xlink:href='%23path-1'%3E%3C/use%3E %3C/mask%3E %3Cg id='Clip-2'%3E%3C/g%3E %3Cpath d='M0.55565,7.08095 L0.55565,1.37445 C0.55565,1.28595 0.65115,1.23045 0.72815,1.27345 L5.96265,4.21295 C5.99765,4.23295 6.04115,4.23295 6.07615,4.21295 L11.27165,1.28395 C11.34865,1.24045 11.44415,1.29595 11.44415,1.38445 L11.44415,7.08095 C11.44415,7.14495 11.39215,7.19645 11.32815,7.19645 L0.67165,7.19645 C0.60765,7.19645 0.55565,7.14495 0.55565,7.08095 M11.05965,0.76645 L6.07565,3.57545 C6.04015,3.59495 5.99715,3.59495 5.96215,3.57545 L0.94315,0.76645 C0.83915,0.70795 0.88015,0.54945 0.99965,0.54945 L11.00315,0.54945 C11.12215,0.54945 11.16365,0.70745 11.05965,0.76645 M0.00015,0.23145 L0.00015,7.52095 C0.00015,7.64895 0.10365,7.75245 0.23165,7.75245 L11.76865,7.75245 C11.89615,7.75245 12.00015,7.64895 12.00015,7.52095 L12.00015,0.23295 C12.00015,0.10495 11.89615,0.00145 11.76865,0.00145 L0.23165,-5e-05 C0.10365,-5e-05 0.00015,0.10345 0.00015,0.23145' id='Fill-1' fill='%23FFFFFF' mask='url(%23mask-2)'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E"
+                            alt=""></div>
+                </div>
+            </div>
+            <div id="valuesb">
+
+                 <!-- <input style="color: black;" type="text" id="value1" >
+                <input type="submit"  id="value2">
+
+                <input type="submit"  id="value3"> -->
+
+            </div>
+        </div>
+
+
+    </div>
+<!-- 
+    <div id="About">
+        <div>
+            <h3>Natures Velvet Stevia Leaf Powder - Natural Sweetener & Herbal Detox</h3>
+            <h3 id="srt"></h3>
+        </div>
+        <div>
+            <h4>About the Product</h4>
+        
+                <p>SteviaLeaf Raw Powder 1 gm (0 Kcal) is equivalent in sweetness to 4-5 teaspoons
+                    of sugar (100 Kcals). Can be used in Cooking and Baking as Stable when heated. The powder can be
+                    used in its natural state or prepared as a sweet clear syrup. Stevia Sweet Syrup Can be prepared stored
+                    in Refrigerator
+                    for 10-15 days. To prepare syrup, Boil Stevia powder in Water for 10 mins and
+                    Filter the Mixture using a very mine sieve or mesh to get the clear syrup. Stevia
+                    is used in sweets, soft drinks, pastry, pickles, candy, jam, yoghurt, sorbet
+                    s, etc. Good for teeth as it does not cause cavities.</p>
+         
+        
+        </div>
+        <div>
+            <h4>Composition</h4>
+            <p>Stevia Rebaudiana Leaf Powder</p>
+        </div>
+        <div>
+            <h4>How to Use</h4>
+            <p>Add 1 gm or one-fourth teaspoon of stevia powder or use the prepared stevia syrup for sweetness
+                How to Prepare Stevia Syrup: Stevia Sweet Syrup can be prepared and kept in the refrigerator.
+                Boil Stevia powder in water and filter the mixture to get a clear </p>
+        </div>
+        <div>
+            <h4>Other Product Info</h4>
+            <p>EAN Code: 40115087
+                FSSAI Number: 13615011000005
+                Manufactured & Marketed by: Natures Velvet Lifecare , 103,3rd floor,liberty plaza,opp to
+                stanza,Hyderabad,Telangan-500029
+                Country of Origin: India
+                Best before 28-04-2023</p>
+        </div>
+    </div>
+ -->
+
+
+</body>
+
+</html>
+
+<script>
+
+    let datim = JSON.parse(localStorage.getItem('datil'))
+    let cartsd = []
+
+    datim.map(function (data) {
+
+        let div = document.createElement("div")
+        // div.setAttribute("class",)
+        let img = document.createElement("img")
+        img.setAttribute("class", "bigimg")
+        let h3 = document.createElement("h6")
+
+        let p = document.createElement("h6")
+        let r = document.createElement("p")
+        let q = document.createElement("input")
+        q.value = data.quant
+        q.setAttribute("id","value1")
+
+        let x = document.createElement("button")
+        x.innerText = "Add to Basket"
+         x.setAttribute("id","value2")
+         x.addEventListener("click",function(){
+            gobasket(data)
+
+         })
+
+        let y = document.createElement("button")
+        y.innerText = "Save"
+        y.setAttribute("id","value3")
+
+
+        img.src = data.image_url
+        h3.innerText = data.name
+        p.innerText = `price:${data.price}`
+        r.innerText = data.strikedoffprice
+        r.style.textDecoration = "line-through"
+        r.innerText = `MRP: ${data.strikedoffprice}`
+
+        // document.getElementById(quant1).append(q)
+           
+          
+        
+
+        // r.setAttribute("class","linebw")
+
+
+
+
+        divimg.append(img)
+        priced.append(h3, r, p,q,x,y)
+        // container.append(div)
+        // document.getElementById("container").append(div)
+
+
+    })
+
+    function   gobasket(data){
+        cartsd.push(data)
+        console.log("cat:",cartsd)
+        localStorage.setItem("cart",JSON.stringify(cartsd))
+    }
+
+   
+  
+
+
+</script>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      
+        #navbar{
+            width: 75%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #navdiv2{
+            color: gray;
+        }
+        /* -------------------------------------------------------- */
+
+        #conatiner{
+        
+            width: 75%;
+           
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #part1{
+            width: 100%;  
+            /* border: 1px solid rgb(216, 67, 67); */
+            box-sizing: border-box;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        #part2{
+            width: 27%;  
+         
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        .red{
+            color: rgb(177, 6, 6);
+        }
+        #form > p{
+            font-size: 20px;
+            margin-bottom: 0px;
+        }
+        #formfirstline{
+            display: flex;
+            justify-content: space-between;
+        }
+        #formfirstline > div{
+           width: 32%;
+        }
+        #formfirstline > div > input{
+            width: 100%;
+            border: 0%;
+        }
+
+        #formsecondline{
+            display: flex;
+            justify-content: space-between;
+        }
+        #formsecondline > div{
+           width: 49%;
+        }
+        #formsecondline > div > input{
+            width: 100%;
+            border: 0%;
+            margin-bottom: 10px;
+        }
+        #formthirdline{
+            display: flex;
+            justify-content: space-between;
+        }
+        #formthirdline > div{
+           width: 49%;
+        }
+        #formthirdline > div > input{
+            width: 100%;
+            border: 0%;
+            margin-bottom: 10px;
+        }
+        #formforthline{
+            display: flex;
+            justify-content: space-between;
+        }
+        #formforthline > div{
+           width: 32%;
+        }
+        #formforthline > div > input{
+            width: 100%;
+            border: 0%;
+        }
+        .input-button{
+            margin:10px;
+            width: 100px;
+            border: 0ch;
+            border: 1px solid greenyellow;
+            border-radius: 5px;
+        }
+        #submit{
+            margin: 20px;
+            background-color: white;
+            border: 1px solid greenyellow;
+            border-radius: 5px;
+            padding: 10px;
+            padding-bottom: 10px;
+            font-size: large;
+        }
+       
+    </style>
+</head>
+<body>
+   
+    <div id="navbar">
+        <div><img src="https://www.bigbasket.com/static/v2489/common/img/bb_logo.png" alt=""></div>
+        <div id="navdiv2"><h3>1860 123 1000</h3></div>
+    </div>
+    <hr>
+     <!-- ============================================================================================ -->
+    <div id="conatiner">
+        <div id="part1">
+            <div >
+              <p  style="letter-spacing:2px; font-size: large;"> <i class="fa-solid fa-location-dot"></i>Delivery Address</p>
+            </div>
+            <div id="form_div">
+                
+                <form action="" id="form">
+                    <p>Personal Details</p>
+                    <div id="formfirstline">
+                    <div>
+                        <label for=""><span class="red">*</span>Enter first name</label><br>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label for=""><span class="red">*</span> Enter last name</label><br>
+                        <input type="text" id="namelast">
+                    </div>
+                    <div>
+                        <label for=""><span class="red">*</span>Enter contact number</label><br>
+                        <input type="text" id="number">
+                    </div>
+                </div>
+
+
+                <p>Address Details</p>
+                    <div id="formsecondline">
+                    <div>
+                        <label for=""><span class="red">*</span>House No</label><br>
+                        <input type="text" id="houseno">
+                    </div>
+                    <div>
+                        <label for=""><span class="red">*</span>Enter apartment name</label><br>
+                        <input type="text" id="apartmentname">
+                    </div>
+                   
+                </div>
+
+                
+                    <div id="formthirdline">
+                    <div>
+                        <label for=""><span class="red">*</span>Enter street details</label><br>
+                        <input type="text" id="streetdetails">
+                    </div>
+                    <div>
+                        <label for=""><span class="red">*</span>
+                            Enter landmark for easy reach out</label><br>
+                        <input type="text" id="landmark">
+                    </div>
+                   
+                </div>
+
+                
+                    <div id="formforthline">
+                    <div>
+                        <label for=""><span class="red">*</span>Enter city name</label><br>
+                        <input type="text" id="city">
+                    </div>
+                    <div>
+                        <label for=""><span class="red">*</span>Area details</label><br>
+                        <input type="text" id="areadetals">
+                    </div>
+                    <div>
+                        <label for=""><span class="red">*</span> Enter Pincode</label><br>
+                        <input type="text" id="pincode">
+                    </div>
+                   
+                </div>
+
+                <p>Choose nick name for this address</p>
+
+                  <input type="button" value="home" class="input-button" id="home">
+                  <input type="button" value="Office"  class="input-button" id="ofice">
+                  <input type="button" value="Others"  class="input-button" id="others"><br>
+
+
+                   <input type="submit" id="submit" onclick=" addressinfo()">
+
+
+                    <!-- <input type="submit" onclick="addressinfo()"> -->
+
+                </form>
+            </div>
+        </div>
+       
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>
+<script>
+
+
+function addressinfo(){
+    event.preventDefault();
+    let name1 = document.querySelector("#name").value;
+    let namelast = document.querySelector("#namelast").value;
+    let number = document.querySelector("#number").value;
+    let houseno = document.querySelector("#houseno").value;
+    let apartmentname = document.querySelector("#apartmentname").value;
+    let streetdetails = document.querySelector("#streetdetails").value;
+    let  landmark= document.querySelector("#landmark").value;
+    let city = document.querySelector("#city").value;
+    let areadetals = document.querySelector("#areadetals").value;
+    let pincode = document.querySelector("#pincode").value;
+
+   
+    // console.log(name1,namelast,number,houseno,apartmentname,streetdetails,landmark,city,areadetals,pincode)
+    let p1 = new  Addressdetails(name1,namelast,number,houseno,apartmentname,streetdetails,landmark,city,areadetals,pincode);
+   
+    localStorage.setItem("AddressInfo", JSON.stringify(p1));
+   
+}
+
+function Addressdetails(name1,namelast,number,houseno,apartmentname,streetdetails,landmark,city,areadetals,pincode){
+    this.name = name1;
+    this.lastname = namelast;
+    this.phone_number = number;
+    this.houseno = houseno;
+    this.apartmentname = apartmentname;
+    this.streetdetails = streetdetails;
+    this.landmark = landmark;
+    this.city = city;
+    this.areadetails = areadetals;
+    this.pincode = pincode; 
+}
+
+</script>

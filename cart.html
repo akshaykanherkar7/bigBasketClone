@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     
+       #container{
+           width: 80%;
+       
+         
+           margin: auto;
+           background-color: white;
+           box-sizing: border-box;
+           padding: 15px;
+       }
+       /* ----------------------------------------------- */
+       #items_dis{
+           display: flex;
+           justify-content: space-between;
+           background-color: rgb(83, 80, 80);
+           margin-top: 20px;
+       }
+       #items_dis > div{
+           display: flex;
+          align-items: center;
+       }
+       #items_dis > div >h3{
+          padding-left: 30px;
+          font-size: 13px;
+          color: white;
+       }
+       #section1{
+           width: 52%;
+       }
+       #section2{
+           width: 40%;
+          display: flex;
+          justify-content: space-around;
+       }
+       #section2 > h3{
+           padding-right: 50px;
+       }
+       #section3 {
+           width: 10%;
+           padding-right: 20px;
+           background-color: #C6CC74;
+       }
+       /* --------------------------------------------------- */
+
+       #items_cat{
+            display: flex;
+           width: 100%;
+           height: 30px;
+           background-color: rgb(202, 199, 199);
+           align-self: center;
+       }
+       #items_cat > P{
+           padding-top: 5px;
+           padding-left: 10px;
+           padding-right: 10px;
+           margin-top: 0%;
+       }
+       /* ---------------------------------------------------- */
+       .items_dis1{
+           display: flex;
+           height: 30px;
+           justify-content: space-between;
+           margin-top: 20px;
+           align-items: center;
+       }
+       .items_dis1 > div{
+           display: flex;
+           align-items: center;
+          
+       }
+       .items_dis1 > div >h5{
+        padding-left: 30px;
+          font-size: 13px;
+       }
+       .section_1{
+           width: 45%;
+       }
+     .section_2{
+        width: 40%;
+        display: flex;
+        justify-content:space-around;
+          
+       } 
+       .section_2 > h5{ 
+           padding-right: 30px;
+       }
+       .section_2 > div{
+        padding-right: 30px;
+       }
+       .section_3 > button{
+ 
+           padding-right: 30px;
+        
+       }
+       
+       .section_4 {
+           width: 6%;
+           padding-right: 20px;
+           display: flex;
+           justify-content: space-between;
+           
+       }
+       .buttonquan{
+           display: flex;
+           height: 20px;
+           padding-left: 20px;
+        
+       }
+       .buttonquan > input{
+           width: 20px;
+       }
+       #dutton3{
+           background-color: white;
+         
+          
+       }
+       #details{
+           display: flex;
+           width: 100%;
+           padding-top: 50px;
+       }
+       #details > div{
+           width: 50%;
+           box-sizing: border-box;
+           padding: 10px;
+       }
+       #part{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+         
+ 
+       }
+       .but{
+           height: 30px;
+           width: 40%;
+
+       }
+       #emptry{
+           border-radius: 10px;
+           border: 1px solid greenyellow;
+       }
+       #continue_shopping{
+        border-radius: 10px;
+           border: 1px solid greenyellow;
+       }
+      #chechout{
+          height: 40px;
+          width: 120px;
+          font-size: 20px;
+          color: gray;
+          border-radius: 10px;
+          border: 1px solid greenyellow;
+      }
+      #part1{
+        box-shadow: rgba(78, 240, 46, 0.4) 5px 5px, rgba(46, 240, 56, 0.3) 10px 10px, rgba(53, 240, 46, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        border-radius: 10px;  
+        border: 1px solid greenyellow;
+    }
+    #heading > h3{
+       font-weight: 100;
+       font-size: 30px;
+       color: gray;
+       
+    }
+    #promo_bottone{
+        height: 30px;
+        border: 1px solid orange;
+        border-radius: 10px;
+    }
+
+       
+
+   </style>
+</head>
+<body>
+    <div id="container">
+     <div id="heading"></div>
+     <hr>
+     <div id="promo">
+         <button id="promo_bottone">VIEW AVAILABLE PROMOS</button>
+     </div>
+ 
+     <div id="items_dis">
+    <div id="section1"><h3>ITEM DESCRIPTION</h3></div> 
+    <div id="section2">    
+    <h3>UNIT PRICE   </h3>
+    <h3>SUBTOTAL UNIT </h3>
+    <h3> QUANTITY </h3>
+    </div> 
+    <div id="section3"><h3>SAVINGS</h3></div>  
+     </div>
+
+     
+     <div id="items_cat">
+
+     </div>
+     <div id="cartItems">
+
+     </div>
+     <div id="details">
+           <div id="part">
+            <button id="emptry" class="but" onclick="emptybasket()">EMPTY BASKET</button>
+           <a href="homepage.html"> <button id="continue_shopping" class="but">CONTINUE SHOPPING</button> </a>
+           </div>
+           <div id="part1">
+               <div>
+                <p id="p1">Subtotal .............................................................     Rs.56.00</p>
+                <p>Delivery Charges ...................................................................................  Free </p>
+               </div>
+                  <hr>  
+                  <div>
+                      <h3 id="p2">TOTAL .......................... Rs. 80.48</h3>
+                      <p id="p3">* For this order: Accepted food coupon is Rs. 80.48</p>
+                      <hr>
+                    </div>  
+                    <div>
+                       <a href="checkout.html"><button id="chechout">Check Out</button></a> 
+                        <p>** Actual delivery charges computed at checkout time</p>
+                    </div>             
+               </div>
+           </div>
+     </div>
+    
+    </div>
+</body>
+</html>
+<script>
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    window.addEventListener("load",function(){
+        displaycart(cart)
+    })
+   
+    
+ 
+function displaycart(cart){
+    let Items = cart.length;
+   let container = document.querySelector("#container");
+
+   let details =  document.querySelector("#details");
+
+    let total = cart.reduce((sum,elem) => {
+     
+     return sum = sum + elem.product_price*elem.product_quantity;
+    },0)
+  
+    document.querySelector("#p1").innerText = `Subtotal .......................................................................................     Rs.${total}.00`
+    document.querySelector("#p2").innerText = `TOTAL ............................................................... Rs.${total}.00 `;
+    document.querySelector("#p3").innerText= `* For this order: Accepted food coupon is Rs. ${total}.00 `
+
+
+//    heading is created here;
+   
+   let heading = document.querySelector("#heading");
+   let heading1 = document.createElement("h3");
+   heading.innerText = null;
+   heading1.innerText = `Your Basket (0${Items} items)`
+   heading.append(heading1);
+  
+   let items_cat = document.querySelector("#items_cat");
+   items_cat.innerText = null;
+   let category = document.createElement("p");
+   category.innerText = "Fruits & Vegetables";
+
+   let items2 = document.createElement("p");
+   items2.innerText =  `0${Items} items: Rs`
+
+   items_cat.append(category,items2);
+
+
+   let cartItems = document.querySelector("#cartItems");
+       cartItems.innerHTML = null;
+       
+   cart.forEach((elem,index)=> {
+   
+    let div = document.createElement("div");
+   div.setAttribute("class","items_dis1");
+
+   let section1 = document.createElement("div");
+   section1.setAttribute("class","section_1")
+   let section1heading = document.createElement("h5");
+   section1heading.innerText = elem.product_name; 
+   section1.append(section1heading)
+
+   let section2 = document.createElement("div");
+   section2.setAttribute("class","section_2")
+   let section2heading = document.createElement("h5");
+   section2heading.innerText = elem.peoduct_mrp; 
+   let section2heading1 = document.createElement("h5");
+   section2heading1.innerText = elem.product_price;
+   
+   let buttondiv = document.createElement("div");
+   buttondiv.setAttribute("class","buttonquan")
+   let button = document.createElement("button");
+   button.innerText = "+";
+   button.addEventListener("click",function(){
+       incriment(elem,index);
+   })
+   let quatnity = document.createElement("input");
+   quatnity.value = elem.product_quantity
+   let button2 = document.createElement("button");
+   button2.innerText = "-";
+   button2.addEventListener("click",function(){
+      decriment(elem,index);
+   })
+   buttondiv.append(button,quatnity,button2);
+   section2.append(section2heading,section2heading1,buttondiv);
+
+   let section3 = document.createElement("div");
+   section3.setAttribute("class","section_3");
+   let button3 = document.createElement("button");
+   button3.setAttribute("id","dutton3");
+   button3.innerText = "X";
+   button3.addEventListener("click",function(){
+       removefromcart(elem,index)
+   })
+//    section2.append(button3);
+
+
+   let section4 = document.createElement("div");
+   section4.setAttribute("class","section_4");
+   let x = elem.peoduct_mrp - elem.product_price;
+    
+   let savings = document.createElement("h4");
+   savings.innerText = x;   
+
+   section4.append(button3,savings);
+
+    
+    div.append(section1,section2,section4);
+    let hr = document.createElement("hr");
+    cartItems.append(div,hr);   
+   });
+
+}
+
+
+function removefromcart(elem,index){
+  cart.splice(index,1);
+  localStorage.setItem("cart",JSON.stringify(cart));
+  displaycart(cart);
+}
+
+function incriment(elem,index){
+    var count = cart[index].product_quantity;
+    // console.log(count);
+    count++;
+    cart[index].product_quantity = count;
+    localStorage.setItem("cart",JSON.stringify(cart));
+    displaycart(cart);
+
+}
+
+function decriment(elem,index){
+    let count = cart[index].product_quantity;
+
+    if( count <= 1 ){
+        cart.splice(index,1);
+        localStorage.setItem("cart",JSON.stringify(cart));
+        displaycart(cart);
+    }
+    else{
+        count--;
+        cart[index].product_quantity = count;
+       localStorage.setItem("cart",JSON.stringify(cart));
+        displaycart(cart);
+    }
+   
+
+}
+
+function emptybasket(){
+    var cart = [];
+    localStorage.setItem("cart",JSON.stringify(cart));
+        displaycart(cart);
+}
+
+
+
+
+</script>

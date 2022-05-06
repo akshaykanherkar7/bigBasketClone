@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <title>Homepage2</title>
+    <style>
+
+        /*                                                       Navbar                                                         */
+        
+
+        /*                                                  image slide show CSS                                                */
+        #imageContainer{
+            margin-top: 10px;
+            height: 440px;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+        #bigimage{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin: auto;
+        }
+        #bigimage+img{
+            height: 100%;
+            width: 100%;
+        }
+        #bigimage figure{
+           position: relative;
+           width: 500%;
+           margin: 0;
+           left: 0;
+           animation: 25s bigimage infinite;
+       }
+       #bigimage figure img{
+           float: left;
+           width: 20%;
+       }
+       @keyframes bigimage{
+           0% {
+               left: 0;
+           }
+           20% {
+                left: 0;
+           }
+           25%{
+               left: -100%;
+           }
+           45%{
+               left: -100%;
+           }
+           50%{
+               left: -200%;
+           }
+           70%{
+               left: -200%;
+           }
+           75%{
+               left: -300%;
+           }
+           95%{
+               left: -300%;
+           }
+           100%{
+               left: -400%;
+           }
+       }
+       /*                                                     after slidebar                                                    */
+       #nameimg{
+           display: flex;
+           justify-content: space-evenly;
+           width: 80%;
+           margin: auto;
+           margin-top: 20px;
+       }
+       /*                                                      My Smart Basket                                                 */
+       /* #smartbasketContainer{
+
+       } */
+
+       /*                                              after smart basket - Har Din Image                                      */
+       #hardin{
+           
+           width: 78.5%;
+           margin: auto;
+           /* border: 1px solid red; */
+           margin-top: 30px;
+       }
+       #hardin img{
+           width: 100%;
+       }
+
+       /*                                                       Banmk Offers                                                 */
+       .bankheading{
+           text-align: center;
+           /* text-align: start; */
+           margin-bottom: -5px;
+           font-size: 22px;
+           font-weight: bold;
+       }
+       .hrbankoffer{
+           width: 80%;
+           margin-bottom: 15px;
+       }
+       #bankimages{
+           display: grid;
+           grid-template-columns: repeat(4 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           justify-content: space-between;
+           gap: 10px;
+           /* border: 1px solid red; */
+           margin: auto;
+       }
+       #bankimages img{
+           width: 100%;
+           /* height: 100%; */
+           /* border: 0.5px solid lightgray;   */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+       }
+       #bankimages img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       
+       /*                                                       Best Sellers                                                     */
+       /* #bestsellers{
+
+       } */
+       #bestsellerContainer{
+            /* border: 1px solid black; */
+            width: 78%;
+            margin: auto;
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+            height: auto;
+        }
+        #productContainer,#productContainer2{
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            width: 100%;
+            margin: auto;
+            margin-top: 30px;
+            height: 520px;
+        }
+        #product{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 5px;
+            padding: 8px;
+            background-color: white;
+
+        }
+        #product:hover{
+            cursor: pointer;
+        }
+        .prodimg{
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 50%;
+            border: 1px solid lightgrey;
+            padding: 5px 25px 5px 25px;
+            border-radius: 10px;
+        }
+        .type{
+            color: gray;
+        }
+        .prodname{
+            font-size: 20px;
+        }
+        .mrpprice{
+            text-decoration: line-through;
+            color: grey;
+        }
+        #pricediv{
+            margin-top: -15px;
+            display: flex;
+            gap: 10px;
+        }
+        .hardinsasta{
+            width: 100%;
+            font-size: 16px;
+            padding: 5px;
+            padding-left: 60px;
+            color: green;
+            border-color: green;
+        }
+        .hardinsasta,.addbtn:hover{
+            cursor: pointer;
+        }
+        #buttonsbag{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            gap: 15px;
+        }
+        .addbtn{
+            width: 80%;
+            padding: 3px 10px 3px 10px;
+            border-radius: 10px;
+            border-color: brown;
+            color: brown;
+            background-color: white;
+        }
+        .addbtn:hover{
+            background-color: red;
+            color: white;
+        }
+        #favicon{
+            padding: 3px;
+            width: 10%;
+            font-size: 22px;
+            border: 1px solid red;
+            color: black;
+            border-color: green;
+            padding-left: 8px;
+            height: 30px;
+            padding-top: 10px;
+        }
+
+       /*                                                        Most Popular                                                    */
+       #mostpopularContainer{
+           margin-top: 30px;
+       }
+
+       /*                                                      Fruits & Vegetables                                              */
+       #FVContainer{
+           margin-top: 40px;
+       }
+       #leftside{
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+           width: 100%;
+       }
+       #leftside:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #rightcontainer{
+           /* border: 1px solid red; */
+           width: 100%;
+       }
+       #rightside{
+           /* border: 1px solid red; */
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           grid-template-rows: auto;
+           width: 100%;
+           margin: auto;
+           gap: 10px;
+       }
+       #rightside img{
+           width: 100%;
+            /* border: 0.5px solid lightgray; */
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+           border-radius: 10px;
+       }
+       #rightside img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #fruitandvegContainer{
+           /* border: 1px solid red; */
+           display: grid;
+           grid-template-columns: repeat(2 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           gap: 10px;
+           margin: auto;
+       }
+      
+       /*                                                          Your Daily Staples                                             */
+       #dailystaplesContainer{
+           margin-top: 40px;
+       }
+       #dailystaplesimg{
+           display: grid;
+           grid-template-columns: repeat(6 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           justify-content: space-between;
+           margin: auto;
+           gap: 10px;
+       }
+       #dailystaplesimg img{
+           width: 100%;
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+       }
+       #dailystaplesimg img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+
+       /*                                                                 Beverages                                               */
+       #BeverageContainer{
+           margin-top: 40px;
+       }
+
+       /*                                                                 Snacks Store                                             */
+       #snacksstoreContainer{
+           margin-top: 40px;
+       }
+
+       /*                                                                Beauty & Hygiene                                          */
+       #BeautyHyContainer{
+           margin-top: 40px;
+       }
+
+       /*                                                            Home & Kitchen Essentials                                      */
+       #homeandkitContainer{
+           margin-top: 40px;
+       }
+
+       /*                                                         after Home & Kitchen Big Slider img                               */
+       #seccondSlider{
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           height: auto;
+           width: 80%;
+           margin: auto;
+           margin-top: 50px;
+          border-radius: 5px;
+        }
+
+       /*                                                                    Brand Store                                             */
+       #brandstoreContainer{
+           margin-top: 35px;
+       }
+
+       /*                                                             Featured Recipes Img Slider                                       */
+       #furescContainer{
+           margin-top: 40px;
+       }
+       #thirdslider{
+           border: 1px solid lightgray;
+           height: auto;
+           width: 80%;
+           margin: auto;
+       }
+
+       /*                                                                      Footer PARA                                                   */
+       #paraContainer{ 
+           border: 1px solid grey;
+           width: 80%;
+           margin: auto;
+           height: auto;
+           margin-top: 40px;
+       }
+       .para{
+           width: 80%;
+           margin: auto;
+           text-align: justify;
+        }
+   
+
+    @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #imageContainer{
+            margin-top: 10px;
+            height: auto;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+        #bankimages{
+           display: grid;
+           grid-template-columns: repeat(2 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           justify-content: space-between;
+           gap: 10px;
+           /* border: 1px solid red; */
+           margin: auto;
+       }
+
+       #bestsellerContainer{
+            /* border: 1px solid black; */
+            width: 78%;
+            margin: auto;
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+       #productContainer{
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            width: 100%;
+            margin: auto;
+            margin-top: 30px;
+            /* height: 500px; */
+        }
+        #nameimg{
+           display: flex;
+           justify-content: space-evenly;
+           width: 80%;
+           margin: auto;
+           margin-top: 20px;
+       }
+
+       #dailystaplesContainer{
+           margin-top: 40px;
+       }
+       #dailystaplesimg{
+           display: grid;
+           grid-template-columns: repeat(3 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           justify-content: space-between;
+           margin: auto;
+           gap: 10px;
+       }
+       #dailystaplesimg img{
+           width: 100%;
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+       }
+       #dailystaplesimg img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #FVContainer{
+           margin-top: 40px;
+       }
+       #leftside{
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+           width: 100%;
+       }
+       #leftside:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #rightcontainer{
+           /* border: 1px solid red; */
+           width: 100%;
+       }
+       #rightside{
+           /* border: 1px solid red; */
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           grid-template-rows: auto;
+           width: 100%;
+           margin: auto;
+           gap: 10px;
+       }
+       #rightside img{
+           width: 100%;
+            /* border: 0.5px solid lightgray; */
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+           border-radius: 10px;
+       }
+       #rightside img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #fruitandvegContainer{
+           /* border: 1px solid red; */
+           display: grid;
+           grid-template-columns: repeat(1 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           gap: 10px;
+           margin: auto;
+       }
+    }
+
+    #navbaricon{
+        margin-left: 50px;
+        /* border: 1px solid red; */
+        display: flex;
+        gap: 5px;
+    }
+    #usericon{
+        height: 15px;
+        display: block;
+        font-size: 18px;
+        margin-top: 8px;
+        /* border: 1px solid red; */
+        text-align: center;
+        padding: 10px 25px 10px 25px;
+        color: black;
+        background-color: lightgray;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    
+    <!-- navbar + -->
+    <div id="NavbarContainer">
+    </div>
+
+    <!-- image slide show -->
+    <div id="imageContainer">
+        <div id="bigimage">
+            <figure>
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_Weekdayblore_460_030522.jpeg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_f_v_m_mango_460-250422.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_c_YXTT611_460_1may22.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_Adhoc_Happychef_460-250422.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_Adhoc_GM-SteeltheDeal!_460-250422.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_Adhoc_skincare_460-250422.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_Adhoc_Dairy(Curd)_460-250422.jpg" alt="">
+            </figure>
+        </div>
+    </div>
+
+    <!-- after slider -->
+    <div id="nameimg">
+        <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_emf_190x60_250422.png" alt=""></a>
+        <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_bbstar_190x60_250422.png" alt=""></a>
+        <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_precautionary_190x60_250422.png" alt=""></a>
+        <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_faq_190x60_250422.png" alt=""></a>
+        <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_combostore_190x60_250422.png" alt=""></a>
+        <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_dealsoftheweek_190x60_250422.png" alt=""></a>
+    </div>
+
+    <!-- My Smart Basket -->
+    <div id="smartbasketContainer"></div>
+        <div id="bestsellerContainer">
+            <h2>My Smart Basket</h2>
+            <div id="productContainer">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- after smart basket - Har Din Image  -->
+    <div id="hardin">
+        <a href="">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_hardinsasta_bangalore_400_020522.jpeg" alt="">
+        </a>
+    </div>
+
+    <!-- Bank Offers -->
+    <div id="bankofferContainer">
+        <p class="bankheading">Bank Offers</p>
+        <hr class="hrbankoffer">
+        <div id="bankimages">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/a9814177-3e30-4d30-bba6-cc690da0c6a5/May_Affiliates_Citi_480x360-290422.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/a9814177-3e30-4d30-bba6-cc690da0c6a5/May_Affiliates_PaytmWallet_480x360-290422.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/a9814177-3e30-4d30-bba6-cc690da0c6a5/May_Affiliates_RBL%20Bank_480x360-290422.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/a9814177-3e30-4d30-bba6-cc690da0c6a5/May_Affiliates_DigiBank_480x360-290422.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Best Sellers -->
+    <div id="bestsellers"></div>
+        <div id="bestsellerContainer">
+            <h2>Best Sellers</h2>
+            <div id="productContainer2">
+           
+            </div>
+        </div>
+    </div>
+
+    <!-- Most Popular -->
+    <div id="mostpopularContainer">
+        <p class="bankheading">Most Popular</p>
+        <hr class="hrbankoffer">
+        <div id="bankimages">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fb6f0bcb-3e36-4fde-a797-b887901fd197/hp_bottles-mostpopularStorefront_m_480_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fb6f0bcb-3e36-4fde-a797-b887901fd197/hp_summer-mostpopularStorefront_m_480_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fb6f0bcb-3e36-4fde-a797-b887901fd197/hp_deo-mostpopularStorefront_m_480_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fb6f0bcb-3e36-4fde-a797-b887901fd197/hp_store-mostpopularStorefront_m_480_250422_04.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Top Offers  -->
+    <div id="topoffersContainer">
+        <p class="bankheading">Top Offers</p>
+        <hr class="hrbankoffer">
+        <div id="bankimages">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/6db37128-9831-4faf-87c5-5150365019eb/hp_deal-topoffersStorefront_m_480_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/6db37128-9831-4faf-87c5-5150365019eb/hp_big-topoffersStorefront_m_480_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/6db37128-9831-4faf-87c5-5150365019eb/hp_combo-topoffersStorefront_m_480_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/6db37128-9831-4faf-87c5-5150365019eb/hp_the-30-topoffersStorefront_m_480_250422_04.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Fruits & Vegetables -->
+    <div id="FVContainer">
+        <p class="bankheading">Fruits & Vegetables</p>
+        <hr class="hrbankoffer">
+        <div id="fruitandvegContainer">
+        <div id="leftside">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ed075230-af8a-410b-bc2a-b18f5600bf0c/hp_fnvStorefront_m_250422_560x378_01.jpg" alt=""></a>
+            </div>
+            <div id="rightcontainer">
+                <div id="rightside">
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ed075230-af8a-410b-bc2a-b18f5600bf0c/hp_fresh-fruits-fnvStorefront_m_250422_275x184_02.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ed075230-af8a-410b-bc2a-b18f5600bf0c/hp_fresh-veggs-fnvStorefront_m_250422_275x184_03.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ed075230-af8a-410b-bc2a-b18f5600bf0c/hp_cut-spourts-fnvStorefront_m_250422_275x184_04.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ed075230-af8a-410b-bc2a-b18f5600bf0c/hp_exotic-fnv-fnvStorefront_m_250422_275x184_05.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your Daily Staples -->
+    <div id="dailystaplesContainer">
+        <p class="bankheading">Your Daily Staples</p>
+        <hr class="hrbankoffer">
+        <div id="dailystaplesimg">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/b73f7a4a-cf66-432c-b876-60e8233521bf/hp_staplesStorefront_m_480_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/b73f7a4a-cf66-432c-b876-60e8233521bf/hp_staplesStorefront_m_480_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/b73f7a4a-cf66-432c-b876-60e8233521bf/hp_staplesStorefront_m_480_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/b73f7a4a-cf66-432c-b876-60e8233521bf/hp_staplesStorefront_m_480_250422_04.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/b73f7a4a-cf66-432c-b876-60e8233521bf/hp_staplesStorefront_m_480_250422_05.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/b73f7a4a-cf66-432c-b876-60e8233521bf/hp_staplesStorefront_m_480_250422_06.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Beverages -->
+    <div id="BeverageContainer">
+        <p class="bankheading">Beverages</p>
+        <hr class="hrbankoffer">
+        <div id="fruitandvegContainer">
+        <div id="leftside">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ff523f94-8028-4690-b9b0-427696cd91de/hp_soft-drinks-beveragesStorefront_m_250422_560x378_01.jpg" alt=""></a>
+            </div>
+            <div id="rightcontainer">
+                <div id="rightside">
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ff523f94-8028-4690-b9b0-427696cd91de/hp_juices-beveragesStorefront_m_251121_02.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ff523f94-8028-4690-b9b0-427696cd91de/hp_coconut-water-beveragesStorefront_m_251121_03.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ff523f94-8028-4690-b9b0-427696cd91de/hp_energy-drinks-beveragesStorefront_m_250422_275x184_04.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/ff523f94-8028-4690-b9b0-427696cd91de/hp_syrups-concentrates-beveragesStorefront_m_250422_275x184_05.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snacks Store -->
+    <div id="snacksstoreContainer">
+        <p class="bankheading">Snacks Store</p>
+        <hr class="hrbankoffer">
+        <div id="bankimages">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/c3f4c5cc-1426-4553-a488-02fa7913a6fc/hp_namkeens-snacksStorefront_m_480_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/c3f4c5cc-1426-4553-a488-02fa7913a6fc/hp_frozen-snacks-snacksStorefront_m_480_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/c3f4c5cc-1426-4553-a488-02fa7913a6fc/hp_soups-snacksStorefront_m_480_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/c3f4c5cc-1426-4553-a488-02fa7913a6fc/hp_biscuits-snacksStorefront_m_480_250422_04.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Cleaning & Household -->
+    <div id="cleandhousContainer">
+        <p class="bankheading">Cleaning & Household</p>
+        <hr class="hrbankoffer">
+        <div id="bankimages">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/4f927b52-d8ce-4ad2-82eb-bb63cad5de74/hp_cleaningStorefront_m_480_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/4f927b52-d8ce-4ad2-82eb-bb63cad5de74/hp_cleaningStorefront_m_480_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/4f927b52-d8ce-4ad2-82eb-bb63cad5de74/hp_cleaningStorefront_m_480_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/4f927b52-d8ce-4ad2-82eb-bb63cad5de74/hp_cleaningStorefront_m_480_250422_04.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Beauty & Hygiene -->
+    <div id="BeautyHyContainer">
+        <p class="bankheading">Beauty & Hygiene</p>
+        <hr class="hrbankoffer">
+        <div id="fruitandvegContainer">
+        <div id="leftside">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/7dfc95e6-890a-408e-8c00-cc8cea7c5545/hp_summer-deos-beautyStorefront_m_250422_560x378_01.jpg" alt=""></a>
+            </div>
+            <div id="rightcontainer">
+                <div id="rightside">
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/7dfc95e6-890a-408e-8c00-cc8cea7c5545/hp_min-20-off-beautyStorefront_m_250422_275x184_02.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/7dfc95e6-890a-408e-8c00-cc8cea7c5545/hp_min-40-off-beautyStorefront_m_250422_275x184_03.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/7dfc95e6-890a-408e-8c00-cc8cea7c5545/hp_makeup-mania-beautyStorefront_m_250422_275x184_04.jpg" alt=""></a>
+                    <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/7dfc95e6-890a-408e-8c00-cc8cea7c5545/hp_shaving-care-beautyStorefront_m_250422_275x184_05.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home & Kitchen Essentials -->
+    <div id="homeandkitContainer">
+        <p class="bankheading">Home & Kitchen Essentials</p>
+        <hr class="hrbankoffer">
+        <div id="dailystaplesimg">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fa7ad295-04e1-4af9-9f88-7d1dd9e7ddd2/hp_GMStorefront_m_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fa7ad295-04e1-4af9-9f88-7d1dd9e7ddd2/hp_GMStorefront_m_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fa7ad295-04e1-4af9-9f88-7d1dd9e7ddd2/hp_GMStorefront_m_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fa7ad295-04e1-4af9-9f88-7d1dd9e7ddd2/hp_GMStorefront_m_250422_04.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fa7ad295-04e1-4af9-9f88-7d1dd9e7ddd2/hp_GMStorefront_m_250422_05.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/fa7ad295-04e1-4af9-9f88-7d1dd9e7ddd2/hp_GMStorefront_m_250422_06.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- after Home & Kitchen Big Slider img  -->
+    <div id="seccondSlider">
+        <div id="bigimage">
+            <figure>
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_health_suppliment_250422_400.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_babycare_250422_400.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_tataneu_400_100422.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_tataneu_400_100422.jpg" alt="">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_bcd_250422_400.jpg" alt="">
+            </figure>
+        </div>
+    </div>
+
+    <!-- Brand Store -->
+   <div id="brandstoreContainer">
+        <p class="bankheading">Brand Store</p>
+        <hr class="hrbankoffer">
+        <div id="dailystaplesimg">
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/04dd800c-0328-42cf-a356-5bf5a2d78790/hp_brandStorefront_m_480_250422_01.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/04dd800c-0328-42cf-a356-5bf5a2d78790/hp_brandStorefront_m_480_250422_02.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/04dd800c-0328-42cf-a356-5bf5a2d78790/hp_brandStorefront_m_480_250422_03.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/04dd800c-0328-42cf-a356-5bf5a2d78790/hp_brandStorefront_m_480_250422_04.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/04dd800c-0328-42cf-a356-5bf5a2d78790/hp_brandStorefront_m_480_250422_05.jpg" alt=""></a>
+            <a href=""><img src="https://www.bigbasket.com/media/customPage/77880b23-0233-4fad-b54a-a93c998e0d20/17dda928-88f2-4c85-8f48-ebeaf9e915b6/04dd800c-0328-42cf-a356-5bf5a2d78790/hp_brandStorefront_m_480_250422_06.jpg" alt=""></a>
+        </div>
+   </div>
+
+   <!-- Featured Recipes -->
+   <div id="furescContainer">
+        <p class="bankheading">Featured Recipes</p>
+        <hr class="hrbankoffer">
+        <div id="thirdslider">
+            <div id="bigimage">
+                <figure>
+                    <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_c_winner_cxnp-9688_400_280422.jpg" alt="">
+                    <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_c_submit_cxnp-9687_400_280422.jpg" alt="">
+                    <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_c_lemon-cream_cxnp-9690_400_280422.jpg" alt="">
+                    <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_c_lamb-pie-9691_400_280422.jpg" alt="">
+                    <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_c_mangoche_cxnp-9689_400_280422.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+   </div>
+
+   <!-- Footer Para  -->
+
+   <div id="paraContainer">
+        <p class="para">bigbasket – online grocery store
+            Did you ever imagine that the freshest of fruits and vegetables, top quality pulses and food grains, dairy products and hundreds of branded items could be handpicked and delivered to your home, all at the click of a button? India’s first comprehensive online megastore, bigbasket.com, brings a whopping 20000+ products with more than 1000 brands, to over 4 million happy customers. From household cleaning products to beauty and makeup, bigbasket has everything you need for your daily needs. bigbasket.com is convenience personified We’ve taken away all the stress associated with shopping for daily essentials, and you can now order all your household products and even buy groceries online without travelling long distances or standing in serpentine queues. Add to this the convenience of finding all your requirements at one single source, along with great savings, and you will realize that bigbasket- India’s largest online supermarket, has revolutionized the way India shops for groceries. Online grocery shopping has never been easier. Need things fresh? Whether it’s fruits and vegetables or dairy and meat, we have this covered as well! Get fresh eggs, meat, fish and more online at your convenience. Hassle-free Home Delivery options
+            
+            We deliver to 25 cities across India and maintain excellent delivery times, ensuring that all your products from groceries to snacks branded foods reach you in time.
+            
+            Slotted Delivery: Pick the most convenient delivery slot to have your grocery delivered. From early morning delivery for early birds, to late-night delivery for people who work the late shift, bigbasket caters to every schedule.
+            Express Delivery: This super useful service can be availed by customers in cities like Bangalore, Mumbai, Pune, Chennai, Kolkata, Hyderabad and Delhi-NCR in which we deliver your orders to your doorstep in 90 Minutes.
+            BB Specialty stores: Missed out on buying that essential item from your favorite neighborhood store for tonight’s party? We’ll deliver it for you! From bakery, sweets and meat to flowers and chocolates, we deliver your order in 90 minutes, through a special arrangement with a nearby specialty store, verified by us.
+            Read more..
+            India’s biggest Online Supermarket
+            bigbasket.com believes in providing the highest level of customer service and is continuously innovating to meet customer expectations. Our On-time Guarantee is one such assurance where we refund 10% of the bill value if the delivery is delayed. For all your order values above Rs. 1000, we provide free delivery. A wide range of imported and gourmet products are available through our express delivery and slotted delivery service. If you ever find an item missing on delivery or want to return a product, you can report it to us within 48 hours for a ‘no-questions-asked’ refund.
+            
+            Best quality products for our quality-conscious customers.
+            
+            bigbasket.com is synonymous with superior quality and continues to strive for higher levels of customer trust and confidence, by taking feedback and giving our customers what they want. We have added the convenience of pre-cut fruits in our Fresho range. If it’s a product category you’re looking to shop from, we’ve made it convenient for you to access all products in a section easily. For instance, if you’re looking for beverages, you can order from a long list of beverages that include cool drinks, hot teas, fruit juices and more.
+            
+            We are proud to be associated closely with the farmers from whom we source our fresh products. Most of our farm-fresh products are sourced directly from farmers, which not only ensures the best prices and freshest products for our customers but also helps the farmers get better prices. With more than 80 Organic Fruits and Vegetables and a wide range of organic staples, bigbasket has the largest range in the organic products category.
+            
+            When it comes to payment, we have made it easy for our customers can pay through multiple payment channels like Credit and Debit cards, Internet Banking, e-wallets and Sodexo passes or simply pay Cash on Delivery (COD).The convenience of shopping for home and daily needs, while not compromising on quality, has made bigbasket.com the online supermarket of choice for thousands of happy customers across India.</p>
+   </div>
+
+
+   <!-- Footer  -->
+<div id="footerContainer"></div>
+
+</div>
+</body>
+</html>
+
+<script src="/scripts/homepage.js" type="module"></script>

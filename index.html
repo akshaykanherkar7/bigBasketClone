@@ -139,8 +139,9 @@
             padding: 10px;
             border-radius: 10px;
             margin-top: 20px;
+            height: auto;
         }
-        #productContainer{
+        #productContainer,#productContainer2{
             /* border: 1px solid red; */
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -149,7 +150,7 @@
             width: 100%;
             margin: auto;
             margin-top: 30px;
-            height: 500px;
+            height: 520px;
         }
         #product{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -165,10 +166,25 @@
             display: block;
             margin: auto;
             width: 80%;
-            height: 60%;
+            height: 50%;
             border: 1px solid lightgrey;
             padding: 5px 25px 5px 25px;
             border-radius: 10px;
+        }
+        .type{
+            color: gray;
+        }
+        .prodname{
+            font-size: 20px;
+        }
+        .mrpprice{
+            text-decoration: line-through;
+            color: grey;
+        }
+        #pricediv{
+            margin-top: -15px;
+            display: flex;
+            gap: 10px;
         }
         .hardinsasta{
             width: 100%;
@@ -194,6 +210,10 @@
             border-color: brown;
             color: brown;
             background-color: white;
+        }
+        .addbtn:hover{
+            background-color: red;
+            color: white;
         }
         #favicon{
             padding: 3px;
@@ -303,7 +323,7 @@
        /*                                                         after Home & Kitchen Big Slider img                               */
        #seccondSlider{
            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
-           height: 420px;
+           height: auto;
            width: 80%;
            margin: auto;
            margin-top: 50px;
@@ -321,7 +341,7 @@
        }
        #thirdslider{
            border: 1px solid lightgray;
-           height: 420px;
+           height: auto;
            width: 80%;
            margin: auto;
        }
@@ -340,6 +360,118 @@
            text-align: justify;
         }
    
+
+    @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #imageContainer{
+            margin-top: 10px;
+            height: auto;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+        #bankimages{
+           display: grid;
+           grid-template-columns: repeat(2 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           justify-content: space-between;
+           gap: 10px;
+           /* border: 1px solid red; */
+           margin: auto;
+       }
+
+       #bestsellerContainer{
+            /* border: 1px solid black; */
+            width: 78%;
+            margin: auto;
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+       #productContainer{
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            width: 100%;
+            margin: auto;
+            margin-top: 30px;
+            /* height: 500px; */
+        }
+        #nameimg{
+           display: flex;
+           justify-content: space-evenly;
+           width: 80%;
+           margin: auto;
+           margin-top: 20px;
+       }
+
+       #dailystaplesContainer{
+           margin-top: 40px;
+       }
+       #dailystaplesimg{
+           display: grid;
+           grid-template-columns: repeat(3 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           justify-content: space-between;
+           margin: auto;
+           gap: 10px;
+       }
+       #dailystaplesimg img{
+           width: 100%;
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+       }
+       #dailystaplesimg img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #FVContainer{
+           margin-top: 40px;
+       }
+       #leftside{
+           /* border: 0.5px solid lightgray; */
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+           border-radius: 10px;
+           width: 100%;
+       }
+       #leftside:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #rightcontainer{
+           /* border: 1px solid red; */
+           width: 100%;
+       }
+       #rightside{
+           /* border: 1px solid red; */
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           grid-template-rows: auto;
+           width: 100%;
+           margin: auto;
+           gap: 10px;
+       }
+       #rightside img{
+           width: 100%;
+            /* border: 0.5px solid lightgray; */
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+           border-radius: 10px;
+       }
+       #rightside img:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #fruitandvegContainer{
+           /* border: 1px solid red; */
+           display: grid;
+           grid-template-columns: repeat(1 , 1fr);
+           grid-template-rows: auto;
+           width: 79%;
+           gap: 10px;
+           margin: auto;
+       }
+    }
     </style>
 </head>
 <body>
@@ -377,55 +509,9 @@
         <div id="bestsellerContainer">
             <h2>My Smart Basket</h2>
             <div id="productContainer">
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/264003_12-johnsons-baby-buds.jpg" alt="">
-                    <p>Buds</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/20002821_3-himalaya-baby-baby-lotion.jpg" alt="">
-                    <p>Baby Lotion</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/40013518_6-himalaya-baby-baby-soap-extra-moisturizing.jpg" alt="">
-                    <p>Baby Soap - Extra Moisturizing</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/40020805_4-himalaya-baby-shampoo-gentle-baby.jpg" alt="">
-                    <p>Shampoo - Gentle Baby</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
+
             </div>
+        </div>
     </div>
 
     <!-- after smart basket - Har Din Image  -->
@@ -451,56 +537,10 @@
     <div id="bestsellers"></div>
         <div id="bestsellerContainer">
             <h2>Best Sellers</h2>
-            <div id="productContainer">
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/264003_12-johnsons-baby-buds.jpg" alt="">
-                    <p>Buds</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/20002821_3-himalaya-baby-baby-lotion.jpg" alt="">
-                    <p>Baby Lotion</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/40013518_6-himalaya-baby-baby-soap-extra-moisturizing.jpg" alt="">
-                    <p>Baby Soap - Extra Moisturizing</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
-                <div id="product">
-                    <img class="prodimg" src="https://www.bigbasket.com/media/uploads/p/m/40020805_4-himalaya-baby-shampoo-gentle-baby.jpg" alt="">
-                    <p>Shampoo - Gentle Baby</p>
-                    <h3>Rs:90</h3>
-                    <select name="" class="hardinsasta">
-                        <option value="">Har Din Sasta!</option>
-                    </select>
-                    <div id="buttonsbag">
-                        <i class="fa-regular fa-bookmark" id="favicon"></i>
-                        <button class="addbtn">Add</button>
-                    </div>
-                </div>
+            <div id="productContainer2">
+           
             </div>
+        </div>
     </div>
 
     <!-- Most Popular -->

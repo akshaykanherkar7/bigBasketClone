@@ -6,7 +6,7 @@ let navbar = () =>{
             5666441,Banglore
       </p>
       <button><a href="email.html" id="btna">Login/Sign Up</a></button>
-      <a href=""><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
+      <a href="cart.html"><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
       <p id = "bagcount"></p>
 </div>
 <div id="navbarbottom">
@@ -44,7 +44,7 @@ let navbar2 = () => {
       </p>
       <div id="navbaricon">
        <a href=""> <i class="fa-regular fa-user" id="usericon"></i></a>
-        <a href=""><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
+        <a href="cart.html"><i id="bagicon" class="fa-solid fa-bag-shopping"></i></a>
         <p id = "bagcount"></p>
       </div>
 </div>

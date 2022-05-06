@@ -20,7 +20,7 @@ const required1 = () => {
 required1();
 
 
-let addebagArr = JSON.parse(localStorage.getItem("itemtoBag")) || [];
+let addebagArr = JSON.parse(localStorage.getItem("cart")) || [];
 let prodDetailArr = [];
 
 let appendData = (data) =>{
@@ -165,7 +165,7 @@ let addedToBag = (elem) =>{
     count++;
     document.getElementById("bagcount").innerText = count;
     addebagArr.push(elem);
-    localStorage.setItem("itemtoBag",JSON.stringify(addebagArr));
+    localStorage.setItem("cart",JSON.stringify(addebagArr));
 }
 
 let ProducDetail = (elem) =>{

@@ -736,7 +736,7 @@ import {  footer } from "../components/navbar.js";
 document.getElementById("footerContainer").innerHTML = footer();
 
     let datim = JSON.parse(localStorage.getItem('product'))
-    let cartsd = []
+    let cartsd = JSON.parse(localStorage.getItem("cart"))||[];
 
     datim.map(function (data) {
 

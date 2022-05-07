@@ -263,7 +263,7 @@ function displaycart(cart){
 
     let total = cart.reduce((sum,elem) => {
      
-     return sum = sum + elem.product_price*elem.product_quantity;
+     return sum = sum + elem.price*elem.product_quantity;
     },0)
   
     document.querySelector("#p1").innerText = `Subtotal .......................................................................................     Rs.${total}.00`
@@ -301,15 +301,15 @@ function displaycart(cart){
    let section1 = document.createElement("div");
    section1.setAttribute("class","section_1")
    let section1heading = document.createElement("h5");
-   section1heading.innerText = elem.product_name; 
+   section1heading.innerText = elem.name; 
    section1.append(section1heading)
 
    let section2 = document.createElement("div");
    section2.setAttribute("class","section_2")
    let section2heading = document.createElement("h5");
-   section2heading.innerText = elem.peoduct_mrp; 
+   section2heading.innerText = elem.mrp; 
    let section2heading1 = document.createElement("h5");
-   section2heading1.innerText = elem.product_price;
+   section2heading1.innerText = elem.price;
    
    let buttondiv = document.createElement("div");
    buttondiv.setAttribute("class","buttonquan")
@@ -341,7 +341,7 @@ function displaycart(cart){
 
    let section4 = document.createElement("div");
    section4.setAttribute("class","section_4");
-   let x = elem.peoduct_mrp - elem.product_price;
+   let x = elem.mrp - elem.price;
     
    let savings = document.createElement("h4");
    savings.innerText = x;   

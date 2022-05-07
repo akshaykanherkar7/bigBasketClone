@@ -172,7 +172,7 @@ let addedToBag = (elem) =>{
 let ProducDetail = (elem) =>{
     prodDetailArr.push(elem);
     localStorage.setItem("product", JSON.stringify(prodDetailArr));
-    window.location.href = "product.html";
+    window.location.href = "email.html";
 }
 
 

@@ -71,7 +71,8 @@ let appendData = (data) =>{
             type: type,
             name : name,
             price: price,
-            mrp : mrpprice
+            mrp : mrpprice,
+            product_quantity: 1
         }
 
         let btn = document.createElement("button");
@@ -139,7 +140,8 @@ let appendData2 = (data) =>{
             type: type,
             name : name,
             price: price,
-            mrp : mrpprice
+            mrp : mrpprice,
+            product_quantity: 1
         }
 
         let btn = document.createElement("button");

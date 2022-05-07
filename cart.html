@@ -214,7 +214,7 @@
      </div>
      <div id="details">
            <div id="part">
-            <button id="emptry" class="but" onclick="emptybasket()">EMPTY BASKET</button>
+            <button id="emptry" class="but">EMPTY BASKET</button>
            <a href="homepage.html"> <button id="continue_shopping" class="but">CONTINUE SHOPPING</button> </a>
            </div>
            <div id="part1">
@@ -344,7 +344,7 @@ function displaycart(cart){
    let x = elem.mrp - elem.price;
     
    let savings = document.createElement("h4");
-   savings.innerText = x;   
+   savings.innerText = x.toFixed(2);   
 
    section4.append(button3,savings);
 
@@ -390,7 +390,7 @@ function decriment(elem,index){
    
 
 }
-
+document.getElementById("emptry").addEventListener("click",emptybasket);
 function emptybasket(){
     var cart = [];
     localStorage.setItem("cart",JSON.stringify(cart));

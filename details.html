@@ -749,7 +749,7 @@ document.getElementById("footerContainer").innerHTML = footer();
         let p = document.createElement("h6")
         let r = document.createElement("p")
         let q = document.createElement("input")
-        q.value = data.quant
+        q.value = data.product_quantity;
         q.setAttribute("id","value1")
 
         let x = document.createElement("button")
@@ -768,9 +768,9 @@ document.getElementById("footerContainer").innerHTML = footer();
         img.src = data.image
         h3.innerText = data.name
         p.innerText = `price:${data.price}`
-        r.innerText = data.mrpprice
+        r.innerText = data.mrp
         r.style.textDecoration = "line-through"
-        r.innerText = `MRP: ${data.mrpprice}`
+        r.innerText = `MRP: ${data.mrp}`
 
         // document.getElementById(quant1).append(q)
            

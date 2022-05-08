@@ -266,6 +266,8 @@ function displaycart(cart){
      return sum = sum + elem.price*elem.product_quantity;
     },0)
   
+    localStorage.setItem("total",JSON.stringify(total));
+    
     document.querySelector("#p1").innerText = `Subtotal .......................................................................................     Rs.${total}.00`
     document.querySelector("#p2").innerText = `TOTAL ............................................................... Rs.${total}.00 `;
     document.querySelector("#p3").innerText= `* For this order: Accepted food coupon is Rs. ${total}.00 `

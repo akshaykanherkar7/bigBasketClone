@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        #mainContainer{
+            /* border: 1px solid lightgrey; */
+            width: 90%;
+            margin: auto;
+            height: 700px;
+            display: flex;
+            gap: 40px;
+        }
+        #leftsideBox{
+            border: 1px solid lightgrey;
+            width: 60%;
+            height: 670px;
+            margin-top: 15px;
+            margin: auto;
+            padding: 10px;
+        }
+        #rightsideBox{
+            /* border: 1px solid blue; */
+            height: 300px;
+            margin-top: 15px;
+            width: 35%;
+            padding: 20px;
+        }
+        #grayBox{
+            border: 1px solid lightgrey;
+            padding: 20px;
+            background-color: #f6f6f6  ;
+        }
+        #ordrSumBox{
+            border: 1px solid lightgrey;
+            height: 160px;
+            padding: 20px;
+            background-color: white;
+        }
+        #price{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            /* border: 1px solid blue; */
+            height: 50px;
+            margin-top: 10px;
+        }
+        #aftrPrice{
+            display: flex;
+            gap: 170px;
+        }
+        #paymentoptBox{
+            border: 1px solid lightgrey;
+            height: 500px;
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+            background-color: #f6f6f6;
+        }
+        #payOption{
+            border: 1px solid lightgrey;
+            width: 25%;
+            line-height: 40px;
+            background-color: white;
+        }
+        #payOption p{
+            margin-left: 15px;
+        }
+        #payOption p:hover{
+            cursor: pointer;
+        }
+        #payDetail{
+            border: 1px solid lightgrey;
+            width: 75%;
+            height: 300px;
+            background-color: white;
+        }
+        #carddeta{
+            display: flex;
+            gap: 30px;
+        }
+        #mainDiv{
+            margin-left: 30px;
+        }
+        #cnfrmBtn{
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 10px 25px 10px 25px;
+            border-radius: 8px;
+            background-color: #5e9400;
+            color: white;
+            border: transparent;
+        }
+        .cardno{
+            padding: 10px 45px 10px 45px;
+        }
+        .mmyy{
+            padding: 10px;
+            width: 40%;
+        }
+        .cvv{
+            padding: 10px;
+            width: 40%;
+        }
+        #upibtn{
+            padding: 6px 15px 6px 15px;
+            border-radius: 4px;
+            background-color: #5e9400;
+            color: white;
+            border: transparent;
+        }
+        #inpupi{
+            width: 60%;
+            padding: 8px;
+        }
+        #netbtn{
+            padding: 8px 15px 8px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: #5e9400;
+            color: white;
+            border: transparent;
+            margin-top: 15px;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-between;
+            padding: 25px;
+        }
+        #hr{
+            margin-top: -25px;
+            margin-bottom: 25px;
+        }
+        #bigimg{
+            width: 25%;
+            margin-top: -8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="homepage.html"><img id="bigimg" src="https://yesscale.com/wp-content/uploads/2019/05/bigbasket-logo.jpg" alt=""></a>
+        <p>1860 123 1000</p>
+    </div>
+    <hr id="hr">
+    <div id="mainContainer">
+        <div id="leftsideBox">
+            <h2>Payment Options</h2>
+            <div id="paymentoptBox">
+                <div id="payOption">
+                    <p onclick="creditdebit()">Credit / Debit Card</p>
+                    <hr>
+                    <p onclick="Netbanking()">Netbanking</p>
+                    <hr>
+                    <p onclick="upi()">UPI</p>
+                    <hr>
+                    <p onclick="wallet()">Wallet</p>
+                    <hr>
+                    <p onclick="paylater()">Pay Later</p>
+                    <hr>
+                    <p onclick="cashcarddel()">Cash/Card On Delivery</p>
+                    <hr>
+                </div>
+
+                <div id="payDetail">
+                    <div id="mainDiv">
+                        <h3>Credit/Debit Card</h3>
+                    <p>Card Number</p>
+                    <input type="text" name="" class="cardno" placeholder="Enter Card Number">
+                    <div id="carddeta">
+                        <div>
+                            <p>Valid Thru</p>
+                            <input type="number" class = "mmyy" placeholder="MM/YY">
+                        </div>
+                        <div>
+                            <p>CVV</p>
+                            <input type="number" class = "cvv" placeholder="CVV">
+                        </div>
+                     </div>
+                     <a href="i"><button id="cnfrmBtn">Place Order & Pay</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightsideBox">
+            <h3>Order Summary</h3>
+            <div id="grayBox">
+                <div id="ordrSumBox">
+                    <div id="price">
+                        <p>Basket Value</p>
+                        <p id="basketValue"></p>
+                    </div>
+                    <div id="aftrPrice">
+                        <h3>Total Amount Payable</h3>
+                        <h3 id="totalpayable"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+   let total = JSON.parse(localStorage.getItem("total"));
+
+   document.getElementById("basketValue").innerText = total;
+   document.getElementById("totalpayable").innerText = total;
+
+
+    let Netbanking = () => {
+        document.getElementById("mainDiv").innerHTML = null;
+        let h3 = document.createElement("h3");
+        h3.innerText = "Frequently Used Banks";
+
+        let opt1 = document.createElement("input");
+        opt1.setAttribute("id","netselect")
+        opt1.type = "radio"
+        opt1.name = "ak"
+        opt1.style = "cursor:pointer"
+
+        let label1 = document.createElement("label");
+        label1.setAttribute("for","netselect");
+        label1.innerText = "ICICI NetBanking";
+
+        let br = document.createElement("br");
+        let br1 = document.createElement("br");
+
+        let opt2 = document.createElement("input");
+        opt2.setAttribute("id","netselect2")
+        opt2.type = "radio"
+        opt2.name = "ak"
+        opt2.style = "cursor:pointer"
+
+
+        let label2 = document.createElement("label");
+        label2.setAttribute("for","netselect2");
+        label2.innerText = "State Bank of India";
+
+        let br3 = document.createElement("br");
+        let br4 = document.createElement("br");
+
+        let opt3 = document.createElement("input");
+        opt3.setAttribute("id","netselect3")
+        opt3.type = "radio"
+        opt3.name = "ak"
+        opt3.style = "cursor:pointer";
+
+        let label3 = document.createElement("label");
+        label3.setAttribute("for","netselect3");
+        label3.innerText = "HDFC Bank";
+
+        let btn = document.createElement("button");
+        btn.setAttribute("id","netbtn");
+        btn.innerText = "Save and Confirm";
+        btn.addEventListener("click", ()=>{
+            paymentSuccess()
+        })
+
+        let br5 = document.createElement("br");
+
+        document.getElementById("mainDiv").append(h3,opt1,label1,br,br1,opt2,label2,br3,br4,opt3,label3,br5,btn)
+    }
+
+    let upi = () => {
+        document.getElementById("mainDiv").innerHTML = null;
+
+        let p = document.createElement("p");
+        p.innerText = "UPI ID";
+
+        let input = document.createElement("input");
+        input.setAttribute("id","inpupi")
+        input.placeholder = "user@bankname";
+
+        let p2 = document.createElement("p");
+        p2.innerText = "A payment request will be sent to this UPI ID";
+
+        let btn = document.createElement("button");
+        btn.setAttribute("id","upibtn")
+        btn.innerText = "Verify and Confirm Payment"
+        btn.addEventListener("click", ()=>{
+            paymentSuccess()
+        })
+
+        document.getElementById("mainDiv").append(p,input,p2,btn);
+    }
+
+    let wallet = () => {
+        document.getElementById("mainDiv").innerHTML = null;
+        let h3 = document.createElement("h3");
+        h3.innerText = "All Wallets";
+
+        let opt1 = document.createElement("input");
+        opt1.setAttribute("id","netselect")
+        opt1.type = "radio"
+        opt1.name = "ak"
+        opt1.style = "cursor:pointer"
+
+        let label1 = document.createElement("label");
+        label1.setAttribute("for","netselect");
+        label1.innerText = "Paytm";
+
+        let br = document.createElement("br");
+        let br1 = document.createElement("br");
+
+        let opt2 = document.createElement("input");
+        opt2.setAttribute("id","netselect2")
+        opt2.type = "radio"
+        opt2.name = "ak"
+        opt2.style = "cursor:pointer"
+
+
+        let label2 = document.createElement("label");
+        label2.setAttribute("for","netselect2");
+        label2.innerText = "Airtel Money";
+
+        let br3 = document.createElement("br");
+        let br4 = document.createElement("br");
+
+        let opt3 = document.createElement("input");
+        opt3.setAttribute("id","netselect3")
+        opt3.type = "radio"
+        opt3.name = "ak"
+        opt3.style = "cursor:pointer";
+
+        let label3 = document.createElement("label");
+        label3.setAttribute("for","netselect3");
+        label3.innerText = "Mobikwik";
+
+        let br8 = document.createElement("br");
+        let br9 = document.createElement("br");
+
+        let opt4 = document.createElement("input");
+        opt4.setAttribute("id","netselect4")
+        opt4.type = "radio"
+        opt4.name = "ak"
+        opt4.style = "cursor:pointer";
+
+        let label4 = document.createElement("label");
+        label4.setAttribute("for","netselect4");
+        label4.innerText = "Freecharge";
+
+        let btn = document.createElement("button");
+        btn.setAttribute("id","netbtn");
+        btn.innerText = "Save and Confirm";
+        btn.addEventListener("click", ()=>{
+            paymentSuccess()
+        })
+
+        let br5 = document.createElement("br");
+
+        document.getElementById("mainDiv").append(h3,opt1,label1,br,br1,opt2,label2,br3,br4,opt3,label3,br8,br9,opt4,label4,br5,btn)
+    }
+
+    let paylater = () => {
+        document.getElementById("mainDiv").innerHTML = null;
+        let h3 = document.createElement("h3");
+        h3.innerText = "All Wallets";
+
+        let opt1 = document.createElement("input");
+        opt1.setAttribute("id","netselect")
+        opt1.type = "radio"
+        opt1.name = "ak"
+        opt1.style = "cursor:pointer"
+
+        let label1 = document.createElement("label");
+        label1.setAttribute("for","netselect");
+        label1.innerText = "Simple";
+
+        let br = document.createElement("br");
+        let br1 = document.createElement("br");
+
+        let btn = document.createElement("button");
+        btn.setAttribute("id","netbtn");
+        btn.innerText = "Save and Confirm";
+        btn.addEventListener("click", ()=>{
+            paymentSuccess()
+        })
+
+        let br5 = document.createElement("br");
+
+        document.getElementById("mainDiv").append(h3,opt1,label1,br5,btn)
+    }
+
+    let cashcarddel = () => {
+        document.getElementById("mainDiv").innerHTML = null;
+        let h3 = document.createElement("h3");
+        h3.innerText = "Cash/Card on Delivery";
+
+        let opt1 = document.createElement("input");
+        opt1.setAttribute("id","netselect")
+        opt1.type = "radio"
+        opt1.name = "ak"
+        opt1.style = "cursor:pointer"
+
+        let label1 = document.createElement("label");
+        label1.setAttribute("for","netselect");
+        label1.innerText = "Cash on Delivery";
+
+        let br = document.createElement("br");
+        let br1 = document.createElement("br");
+
+        let opt2 = document.createElement("input");
+        opt2.setAttribute("id","netselect2")
+        opt2.type = "radio"
+        opt2.name = "ak"
+        opt2.style = "cursor:pointer"
+
+        let label2 = document.createElement("label");
+        label2.setAttribute("for","netselect2");
+        label2.innerText = "Card on Delivery";
+
+        let br3 = document.createElement("br");
+        let br4 = document.createElement("br");
+
+        let btn = document.createElement("button");
+        btn.setAttribute("id","netbtn");
+        btn.innerText = "Place Order";
+        btn.addEventListener("click", ()=>{
+            paymentSuccess()
+        })
+
+        let br5 = document.createElement("br");
+
+        document.getElementById("mainDiv").append(h3,opt1,label1,br3,br4,opt2,label2,br5,btn)
+        
+    }
+
+    let paymentSuccess = () =>{
+        window.location.href = "success.html";
+    }
+</script>

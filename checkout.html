@@ -241,7 +241,7 @@ function addressinfo(){
     let p1 = new  Addressdetails(name1,namelast,number,houseno,apartmentname,streetdetails,landmark,city,areadetals,pincode);
    
     localStorage.setItem("AddressInfo", JSON.stringify(p1));
-   
+    window.location.href = "payment.html"
 }
 
 function Addressdetails(name1,namelast,number,houseno,apartmentname,streetdetails,landmark,city,areadetals,pincode){

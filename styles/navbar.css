@@ -1,6 +1,14 @@
 #NavbarContainer{
     /* border: 1px solid red; */
-    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* margin-left: 10px; */
+    overflow: hidden;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    padding: 7px;
+    margin-bottom: 20px;
+    background-color: white;
 }
 .navbarImage{
     width: 4%;

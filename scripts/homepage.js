@@ -321,19 +321,6 @@ let data = [
     }
       ]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const required = () => {
 //     fetch("http://localhost:4000/data")
 //     .then(res => res.json())
@@ -510,3 +497,8 @@ let ProducDetail = (elem) =>{
     window.location.href = "details.html";
 }
 
+
+let opnHome = () => {
+  window.location.href = "homepage.html"
+}
+document.getElementById("bigimg2").addEventListener("click", opnHome);

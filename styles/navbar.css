@@ -6,6 +6,12 @@
     width: 4%;
     height: 4%
 }
+#bigLogo:hover{
+    cursor: pointer;
+}
+#bigimg2:hover{
+    cursor: pointer;
+}
 .searchBox{
     width: 50%;
     height: 30px;

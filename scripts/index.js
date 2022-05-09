@@ -506,7 +506,11 @@ let ProducDetail = (elem) =>{
 }
 
 
-
+let openHome = () => {
+    window.location.href = "index.html";
+    
+}
+document.getElementById("bigLogo").addEventListener("click",openHome);
 
 
 

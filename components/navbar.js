@@ -1,6 +1,6 @@
 let navbar = () =>{
     return `<div id="navbartop">
-    <img class="navbarImage" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
+    <img class="navbarImage" id = "bigLogo" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
     <i class="fa-solid fa-magnifying-glass" id="searchicon" ></i><input class="searchBox" type="text" placeholder="Search for Products...">
         <p id="delivery">Delivery in 1 Day
             5666441,Banglore
@@ -37,7 +37,7 @@ let navbar = () =>{
 
 let navbar2 = () => {
     return `<div id="navbartop">
-    <img class="navbarImage" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
+    <img class="navbarImage" id = "bigimg2" src="https://play-lh.googleusercontent.com/EuiZnkT8aEKjXDLX74DTp1VRIwWaeRa8Dvo-LOGAxy1FPQ8GzABTIRenksiM-A7Oz48g" alt="">
     <i class="fa-solid fa-magnifying-glass" id="searchicon" ></i><input class="searchBox" type="text" placeholder="Search for Products...">
         <p id="delivery">Delivery in 1 Day
             5666441,Banglore

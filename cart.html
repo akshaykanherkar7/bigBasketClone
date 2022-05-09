@@ -398,7 +398,10 @@ function emptybasket(){
     localStorage.setItem("cart",JSON.stringify(cart));
         displaycart(cart);
 }
-
+let opnHome = () => {
+  window.location.href = "homepage.html"
+}
+document.getElementById("bigimg2").addEventListener("click", opnHome);
 
 
 

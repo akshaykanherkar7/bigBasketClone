@@ -141,9 +141,17 @@
 
 /* first right  */
 .bigbasketImg{
-    width: 18%;
+    width: 48%;
+    margin-left: -10px;
 }
-
+.apple{
+    margin-top: 17.5px;
+    margin-bottom: 35px;
+}
+#vender{
+    margin-top: 10px;
+    margin-left: -8px;
+}
 .download{
     display: flex;
     justify-content: space-evenly;

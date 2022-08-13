@@ -1,5 +1,3 @@
-# Project Title
-
 # bigBasket Clone
 
 # Masai School Construct Week Project
